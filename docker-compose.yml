@@ -1,0 +1,16 @@
+services:
+  portal:
+    build: .
+    image: blockheads-server-portal
+    container_name: blockheads-server-portal
+    # Host networking: game servers claim UDP ports (from 15151 up) at runtime without publishing a range.
+    network_mode: host
+    environment:
+      PORTAL_PORT: "8080"
+      # PORTAL_PASSWORD: "change-me"   # optional; otherwise the first-run page asks for one
+    volumes:
+      - ./data:/data
+      # - /mnt/other-disk/blockheads-backups:/backups   # optional separate backup location
+    # Long enough for every server to save and exit on /stop.
+    stop_grace_period: 60s
+    restart: unless-stopped

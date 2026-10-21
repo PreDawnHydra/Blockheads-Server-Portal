@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+/data/
+# Never commit game files
+*.apk
+*.ipa

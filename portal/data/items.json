@@ -1,0 +1,7793 @@
+[
+ {
+  "id": 0,
+  "internal": "ITEM_NONE",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 0,
+   "x": 0,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1,
+  "internal": "ITEM_CLOTHING_SLOT",
+  "name": "CLOTHING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 1,
+   "x": 16,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 1,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 2,
+  "internal": "ITEM_DEFAULT_MARKER",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 2,
+   "x": 32,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 3,
+  "internal": "ITEM_FLINT",
+  "name": "FLINT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 3,
+   "x": 48,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 4,
+  "internal": "ITEM_STICK",
+  "name": "STICK",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 4,
+   "x": 64,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 5,
+  "internal": "ITEM_EMPTY_MARKER",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 5,
+   "x": 80,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 6,
+  "internal": "ITEM_FLINT_AXE",
+  "name": "FLINT AXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 6,
+   "x": 96,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 7,
+  "internal": "ITEM_FLINT_SPEAR",
+  "name": "FLINT SPEAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 7,
+   "x": 112,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 8,
+  "internal": "ITEM_FLINT_PICKAXE",
+  "name": "FLINT PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 8,
+   "x": 128,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 9,
+  "internal": "ITEM_DOUBLE_TIME",
+  "name": "DOUBLE-TIME",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 9,
+   "x": 144,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 10,
+  "internal": "ITEM_UNDEFINED_C",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 10,
+   "x": 160,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 11,
+  "internal": "ITEM_TIME_CRYSTAL",
+  "name": "TIME CRYSTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 11,
+   "x": 176,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 12,
+  "internal": "ITEM_BASKET",
+  "name": "BASKET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 12,
+   "x": 192,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 1,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 13,
+  "internal": "ITEM_EMBER",
+  "name": "EMBER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 13,
+   "x": 208,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 14,
+  "internal": "ITEM_CHARCOAL",
+  "name": "CHARCOAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 14,
+   "x": 224,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 15,
+  "internal": "ITEM_CAMPFIRE",
+  "name": "CAMPFIRE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 15,
+   "x": 240,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 16,
+  "internal": "ITEM_FLINT_SPADE",
+  "name": "FLINT SPADE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 16,
+   "x": 256,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 17,
+  "internal": "ITEM_BASIC_TORCH",
+  "name": "BASIC TORCH",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 17,
+   "x": 272,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 18,
+  "internal": "ITEM_UNDEFINED_D",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 18,
+   "x": 288,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 19,
+  "internal": "ITEM_BLOCKHEAD",
+  "name": "BLOCKHEAD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 19,
+   "x": 304,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 20,
+  "internal": "ITEM_FOOD",
+  "name": "FOOD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 20,
+   "x": 320,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 21,
+  "internal": "ITEM_APPLE",
+  "name": "APPLE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 21,
+   "x": 336,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 22,
+  "internal": "ITEM_MANGO",
+  "name": "MANGO",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 22,
+   "x": 352,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 23,
+  "internal": "ITEM_MAPLE_SEED",
+  "name": "MAPLE SEED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 23,
+   "x": 368,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 24,
+  "internal": "ITEM_PRICKLY_PEAR",
+  "name": "PRICKLY PEAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 24,
+   "x": 384,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 25,
+  "internal": "ITEM_FLINT_MACHETE",
+  "name": "FLINT MACHETE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 25,
+   "x": 400,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 26,
+  "internal": "ITEM_UNDEFINED_E",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 26,
+   "x": 416,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 27,
+  "internal": "ITEM_PINE_CONE",
+  "name": "PINE CONE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 27,
+   "x": 432,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 28,
+  "internal": "ITEM_CLAY",
+  "name": "CLAY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 28,
+   "x": 448,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 29,
+  "internal": "ITEM_RAW_DODO_MEAT",
+  "name": "RAW DODO MEAT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 29,
+   "x": 464,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 30,
+  "internal": "ITEM_DODO_FEATHER",
+  "name": "DODO FEATHER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 30,
+   "x": 480,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 31,
+  "internal": "ITEM_COPPER_ORE",
+  "name": "COPPER ORE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 31,
+   "x": 496,
+   "y": 0,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 32,
+  "internal": "ITEM_IRON_ORE",
+  "name": "IRON ORE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 32,
+   "x": 0,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 33,
+  "internal": "ITEM_STONE_AXE",
+  "name": "STONE AXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 33,
+   "x": 16,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 34,
+  "internal": "ITEM_STONE_PICKAXE",
+  "name": "STONE PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 34,
+   "x": 32,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 35,
+  "internal": "ITEM_COPPER_INGOT",
+  "name": "COPPER INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 35,
+   "x": 48,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 36,
+  "internal": "ITEM_TIN_ORE",
+  "name": "TIN ORE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 36,
+   "x": 64,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 37,
+  "internal": "ITEM_TIN_INGOT",
+  "name": "TIN INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 37,
+   "x": 80,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 38,
+  "internal": "ITEM_BRONZE_INGOT",
+  "name": "BRONZE INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 38,
+   "x": 96,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 39,
+  "internal": "ITEM_COPPER_SPEAR",
+  "name": "COPPER SPEAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 39,
+   "x": 112,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 40,
+  "internal": "ITEM_TIN_SPADE",
+  "name": "TIN SPADE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 40,
+   "x": 128,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 41,
+  "internal": "ITEM_COPPER_ARROW",
+  "name": "COPPER ARROW",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 41,
+   "x": 144,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 42,
+  "internal": "ITEM_COPPER_BOW",
+  "name": "COPPER BOW & ARROWS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 42,
+   "x": 160,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 43,
+  "internal": "ITEM_BRONZE_PICKAXE",
+  "name": "BRONZE PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 43,
+   "x": 176,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 44,
+  "internal": "ITEM_STRING",
+  "name": "STRING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 44,
+   "x": 192,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 45,
+  "internal": "ITEM_CLAY_JUG",
+  "name": "CLAY JUG",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 45,
+   "x": 208,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 46,
+  "internal": "ITEM_COCONUT",
+  "name": "COCONUT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 46,
+   "x": 224,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 47,
+  "internal": "ITEM_CLAY_LANTERN_LIT",
+  "name": "OIL LANTERN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 47,
+   "x": 240,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 48,
+  "internal": "ITEM_OIL",
+  "name": "OIL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 48,
+   "x": 256,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 49,
+  "internal": "ITEM_BRONZE_MACHETE",
+  "name": "BRONZE MACHETE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 49,
+   "x": 272,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 50,
+  "internal": "ITEM_BRONZE_SWORD",
+  "name": "BRONZE SWORD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 50,
+   "x": 288,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 51,
+  "internal": "ITEM_COAL",
+  "name": "COAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 51,
+   "x": 304,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 52,
+  "internal": "ITEM_DOOR",
+  "name": "WOODEN DOOR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 52,
+   "x": 320,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 53,
+  "internal": "ITEM_LADDER",
+  "name": "LADDER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 53,
+   "x": 336,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 54,
+  "internal": "ITEM_FLAX_SEED",
+  "name": "FLAX SEED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 54,
+   "x": 352,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 55,
+  "internal": "ITEM_FLAX",
+  "name": "FLAX",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 55,
+   "x": 368,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 56,
+  "internal": "ITEM_YELLOW_PIGMENT",
+  "name": "INDIAN YELLOW",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 56,
+   "x": 384,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 57,
+  "internal": "ITEM_RED_PIGMENT",
+  "name": "RED OCHRE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 57,
+   "x": 400,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 58,
+  "internal": "ITEM_WINDOW",
+  "name": "WINDOW",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 58,
+   "x": 416,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 59,
+  "internal": "ITEM_COOKED_DODO_MEAT",
+  "name": "COOKED DODO MEAT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 59,
+   "x": 432,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 60,
+  "internal": "ITEM_ORANGE",
+  "name": "ORANGE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 60,
+   "x": 448,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 61,
+  "internal": "ITEM_SUNFLOWER_SEED",
+  "name": "SUNFLOWER SEED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 61,
+   "x": 464,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 62,
+  "internal": "ITEM_CORN",
+  "name": "CORN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 62,
+   "x": 480,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 63,
+  "internal": "ITEM_WOOD_BED",
+  "name": "WOODEN BED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 63,
+   "x": 496,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 64,
+  "internal": "ITEM_STONE_SPADE",
+  "name": "STONE SPADE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 64,
+   "x": 0,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 65,
+  "internal": "ITEM_IRON_INGOT",
+  "name": "IRON INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 65,
+   "x": 16,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 66,
+  "internal": "ITEM_IRON_PICKAXE",
+  "name": "IRON PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 66,
+   "x": 32,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 67,
+  "internal": "ITEM_IRON_MACHETE",
+  "name": "IRON MACHETE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 67,
+   "x": 48,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 68,
+  "internal": "ITEM_IRON_SWORD",
+  "name": "IRON SWORD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 68,
+   "x": 64,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 69,
+  "internal": "ITEM_TRAPDOOR",
+  "name": "TRAPDOOR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 69,
+   "x": 80,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 70,
+  "internal": "ITEM_IRON_AXE",
+  "name": "IRON AXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 70,
+   "x": 96,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 71,
+  "internal": "ITEM_CARROT",
+  "name": "CARROT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 71,
+   "x": 112,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 72,
+  "internal": "ITEM_GOLD_INGOT",
+  "name": "GOLD INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 72,
+   "x": 128,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 73,
+  "internal": "ITEM_GOLD_ORE",
+  "name": "GOLD NUGGET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 73,
+   "x": 144,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 74,
+  "internal": "ITEM_CARROT_STICK",
+  "name": "CARROT ON A STICK",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 74,
+   "x": 160,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 75,
+  "internal": "ITEM_RUBY",
+  "name": "RUBY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 75,
+   "x": 176,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 76,
+  "internal": "ITEM_EMERALD",
+  "name": "EMERALD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 76,
+   "x": 192,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 77,
+  "internal": "ITEM_CHERRY",
+  "name": "CHERRY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 77,
+   "x": 208,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 78,
+  "internal": "ITEM_COFFEE_CHERRY",
+  "name": "COFFEE CHERRY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 78,
+   "x": 224,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 79,
+  "internal": "ITEM_COFFEE_BEAN_GREEN",
+  "name": "GREEN COFFEE BEAN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 79,
+   "x": 240,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 80,
+  "internal": "ITEM_EMPTY_CLAY_CUP",
+  "name": "CUP",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 80,
+   "x": 256,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 81,
+  "internal": "ITEM_COFFEE_CUP",
+  "name": "COFFEE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 81,
+   "x": 272,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 82,
+  "internal": "ITEM_ROASTED_COFFEE_BEAN",
+  "name": "ROASTED COFFEE BEAN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 82,
+   "x": 288,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 83,
+  "internal": "ITEM_LINEN",
+  "name": "LINEN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 83,
+   "x": 304,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 84,
+  "internal": "ITEM_LINEN_PANTS",
+  "name": "LINEN PANTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 84,
+   "x": 320,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 84,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 85,
+  "internal": "ITEM_LINEN_SHIRT",
+  "name": "LINEN SHIRT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 85,
+   "x": 336,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 85,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 86,
+  "internal": "ITEM_SAPPHIRE",
+  "name": "SAPPHIRE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 86,
+   "x": 352,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 87,
+  "internal": "ITEM_AMETHYST",
+  "name": "AMETHYST",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 87,
+   "x": 368,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 88,
+  "internal": "ITEM_DIAMOND",
+  "name": "DIAMOND",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 88,
+   "x": 384,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 89,
+  "internal": "ITEM_GOLD_SPADE",
+  "name": "GOLD SPADE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 89,
+   "x": 400,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 90,
+  "internal": "ITEM_GOLD_PICKAXE",
+  "name": "GOLD PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 90,
+   "x": 416,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 91,
+  "internal": "ITEM_DODO_EGG",
+  "name": "DODO EGG",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 91,
+   "x": 432,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 92,
+  "internal": "ITEM_STEEL_INGOT",
+  "name": "STEEL INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 92,
+   "x": 448,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 93,
+  "internal": "ITEM_STEEL_PICKAXE",
+  "name": "STEEL PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 93,
+   "x": 464,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 94,
+  "internal": "ITEM_AMETHYST_PICKAXE",
+  "name": "AMETHYST PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 94,
+   "x": 480,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 95,
+  "internal": "ITEM_SAPPHIRE_PICKAXE",
+  "name": "SAPPHIRE PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 95,
+   "x": 496,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 96,
+  "internal": "ITEM_EMERALD_PICKAXE",
+  "name": "EMERALD PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 96,
+   "x": 0,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 97,
+  "internal": "ITEM_RUBY_PICKAXE",
+  "name": "RUBY PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 97,
+   "x": 16,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 98,
+  "internal": "ITEM_DIAMOND_PICKAXE",
+  "name": "DIAMOND PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 98,
+   "x": 32,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 99,
+  "internal": "ITEM_BLUE_PIGMENT",
+  "name": "ULTRAMARINE BLUE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 99,
+   "x": 48,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 100,
+  "internal": "ITEM_BLACK_PIGMENT",
+  "name": "CARBON BLACK",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 100,
+   "x": 64,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 101,
+  "internal": "ITEM_WHITE_PIGMENT",
+  "name": "MARBLE WHITE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 101,
+   "x": 80,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 102,
+  "internal": "ITEM_TIN_BUCKET",
+  "name": "TIN BUCKET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 102,
+   "x": 96,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 103,
+  "internal": "ITEM_PAINT",
+  "name": "PAINT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 102,
+   "x": 96,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 107,
+   "overlayIndexWhenPainted": 103,
+   "overlayTint": "paint colour"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 104,
+  "internal": "ITEM_PAINT_STRIPPER",
+  "name": "PAINT STRIPPER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 104,
+   "x": 128,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 105,
+  "internal": "ITEM_WATER_BUCKET",
+  "name": "BUCKET OF WATER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 105,
+   "x": 144,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 106,
+  "internal": "ITEM_PIGMENT_GENERIC",
+  "name": "PIGMENT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 106,
+   "x": 160,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 107,
+  "internal": "ITEM_PAINT_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 107,
+   "x": 176,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 108,
+  "internal": "ITEM_NO_PIGMENT",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 108,
+   "x": 192,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 109,
+  "internal": "ITEM_PIGMENT_EMERALD_GREEN",
+  "name": "EMERALD GREEN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 109,
+   "x": 208,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 110,
+  "internal": "ITEM_PIGMENT_TYRIAN_PURPLE",
+  "name": "TYRIAN PURPLE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 110,
+   "x": 224,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 111,
+  "internal": "ITEM_BOAT",
+  "name": "BOAT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 111,
+   "x": 240,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 112,
+  "internal": "ITEM_CHILLI",
+  "name": "CHILLI",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 112,
+   "x": 256,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 113,
+  "internal": "ITEM_LINEN_PANTS_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 113,
+   "x": 272,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 114,
+  "internal": "ITEM_LINEN_SHIRT_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 114,
+   "x": 288,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 115,
+  "internal": "ITEM_LINEN_CAP",
+  "name": "LINEN CAP",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 115,
+   "x": 304,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 115,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 116,
+  "internal": "ITEM_LINEN_CAP_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 116,
+   "x": 320,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 117,
+  "internal": "ITEM_LINEN_HAT",
+  "name": "LINEN BRIMMED HAT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 117,
+   "x": 336,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 117,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 118,
+  "internal": "ITEM_LINEN_HAT_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 118,
+   "x": 352,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 119,
+  "internal": "ITEM_PIGMENT_COPPER_BLUE",
+  "name": "COPPER BLUE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 119,
+   "x": 368,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 120,
+  "internal": "ITEM_LEATHER",
+  "name": "LEATHER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 120,
+   "x": 384,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 121,
+  "internal": "ITEM_FUR",
+  "name": "FUR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 121,
+   "x": 400,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 122,
+  "internal": "ITEM_LEATHER_JACKET",
+  "name": "LEATHER JACKET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 122,
+   "x": 416,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 122,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 123,
+  "internal": "ITEM_LEATHER_JACKET_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 123,
+   "x": 432,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 124,
+  "internal": "ITEM_LEATHER_BOOTS",
+  "name": "LEATHER BOOTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 124,
+   "x": 448,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 124,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 125,
+  "internal": "ITEM_LEATHER_BOOTS_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 125,
+   "x": 464,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 126,
+  "internal": "ITEM_FUR_COAT",
+  "name": "FUR COAT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 126,
+   "x": 480,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 126,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 127,
+  "internal": "ITEM_FUR_BOOTS",
+  "name": "FUR BOOTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 127,
+   "x": 496,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 127,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 128,
+  "internal": "ITEM_FUR_COAT_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 128,
+   "x": 0,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 129,
+  "internal": "ITEM_FUR_BOOTS_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 129,
+   "x": 16,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 130,
+  "internal": "ITEM_LEATHER_PANTS",
+  "name": "LEATHER PANTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 130,
+   "x": 32,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 130,
+   "overlayTint": "dataB dye colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 131,
+  "internal": "ITEM_LEATHER_PANTS_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 131,
+   "x": 48,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 132,
+  "internal": "ITEM_WORKBENCH_UPGRADE",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 132,
+   "x": 64,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 133,
+  "internal": "ITEM_CAMERA",
+  "name": "CAMERA",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 133,
+   "x": 80,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 134,
+  "internal": "ITEM_WORKBENCH_PORTAL",
+  "name": "PORTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 134,
+   "x": 96,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 135,
+  "internal": "ITEM_PORTAL_AMETHYST",
+  "name": "AMETHYST PORTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 135,
+   "x": 112,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 136,
+  "internal": "ITEM_PORTAL_SAPPHIRE",
+  "name": "SAPPHIRE PORTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 136,
+   "x": 128,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 137,
+  "internal": "ITEM_PORTAL_EMERALD",
+  "name": "EMERALD PORTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 137,
+   "x": 144,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 138,
+  "internal": "ITEM_PORTAL_RUBY",
+  "name": "RUBY PORTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 138,
+   "x": 160,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 139,
+  "internal": "ITEM_PORTAL_DIAMOND",
+  "name": "DIAMOND PORTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 139,
+   "x": 176,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 140,
+  "internal": "ITEM_FRUIT_HAT",
+  "name": "SUNRISE HAT OF FULLNESS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 140,
+   "x": 192,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 141,
+  "internal": "ITEM_GRASS_SKIRT",
+  "name": "SUNSET SKIRT OF HAPPINESS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 141,
+   "x": 208,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 142,
+  "internal": "ITEM_SANTA_HAT",
+  "name": "NORTH POLE HAT OF WARMTH",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 142,
+   "x": 224,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 143,
+  "internal": "ITEM_SOUTH_POLE_BOOTS",
+  "name": "SOUTH POLE BOOTS OF SPEED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 143,
+   "x": 240,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 144,
+  "internal": "ITEM_KELP",
+  "name": "KELP",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 144,
+   "x": 256,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 145,
+  "internal": "ITEM_AMETHYST_CHANDELIER",
+  "name": "AMETHYST CHANDELIER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 145,
+   "x": 272,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 146,
+  "internal": "ITEM_SAPPHIRE_CHANDELIER",
+  "name": "SAPPHIRE CHANDELIER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 146,
+   "x": 288,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 147,
+  "internal": "ITEM_EMERALD_CHANDELIER",
+  "name": "EMERALD CHANDELIER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 147,
+   "x": 304,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 148,
+  "internal": "ITEM_RUBY_CHANDELIER",
+  "name": "RUBY CHANDELIER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 148,
+   "x": 320,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 149,
+  "internal": "ITEM_DIAMOND_CHANDELIER",
+  "name": "DIAMOND CHANDELIER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 149,
+   "x": 336,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 150,
+  "internal": "ITEM_STEEL_LANTERN",
+  "name": "STEEL LANTERN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 150,
+   "x": 352,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 151,
+  "internal": "ITEM_RAW_FISH",
+  "name": "RAW FISH",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 151,
+   "x": 368,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 152,
+  "internal": "ITEM_COOKED_FISH",
+  "name": "COOKED FISH",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 152,
+   "x": 384,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 153,
+  "internal": "ITEM_TIN_FOIL",
+  "name": "TIN FOIL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 153,
+   "x": 400,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 154,
+  "internal": "ITEM_TIN_FOIL_HAT",
+  "name": "TIN FOIL HAT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 154,
+   "x": 416,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 155,
+  "internal": "ITEM_WORM",
+  "name": "WORM",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 155,
+   "x": 432,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 156,
+  "internal": "ITEM_FISHING_ROD",
+  "name": "FISHING ROD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 156,
+   "x": 448,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 157,
+  "internal": "ITEM_SHARK_JAW",
+  "name": "SHARK JAW",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 157,
+   "x": 464,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 158,
+  "internal": "ITEM_FISH_BUCKET",
+  "name": "FISH BUCKET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 158,
+   "x": 480,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 159,
+  "internal": "ITEM_SHARK_BUCKET",
+  "name": "SHARK BUCKET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 159,
+   "x": 496,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 160,
+  "internal": "ITEM_LIME",
+  "name": "LIME",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 160,
+   "x": 0,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 161,
+  "internal": "ITEM_SHELF",
+  "name": "SHELF",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 161,
+   "x": 16,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 162,
+  "internal": "ITEM_TELEPORT",
+  "name": "TELEPORT HERE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 162,
+   "x": 32,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 163,
+  "internal": "ITEM_SIGN",
+  "name": "SIGN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 163,
+   "x": 48,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 164,
+  "internal": "ITEM_IRON_DOOR",
+  "name": "IRON DOOR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 164,
+   "x": 64,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 165,
+  "internal": "ITEM_IRON_TRAPDOOR",
+  "name": "IRON TRAPDOOR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 165,
+   "x": 80,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 166,
+  "internal": "ITEM_COPPER_COIN",
+  "name": "COPPER COIN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 166,
+   "x": 96,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "COINS"
+ },
+ {
+  "id": 167,
+  "internal": "ITEM_GOLD_COIN",
+  "name": "GOLD COIN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 167,
+   "x": 112,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "COINS"
+ },
+ {
+  "id": 168,
+  "internal": "ITEM_TRADING_POST",
+  "name": "SHOP",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 168,
+   "x": 128,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 169,
+  "internal": "ITEM_SOFT_BED",
+  "name": "SOFT BED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 169,
+   "x": 144,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 171,
+   "overlayTint": "dataB colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 170,
+  "internal": "ITEM_GOLD_BED",
+  "name": "GOLDEN BED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 170,
+   "x": 160,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite",
+   "overlayIndex": 171,
+   "overlayTint": "dataB colour (0.2+0.8*colour)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 171,
+  "internal": "ITEM_BED_QUILT_TEXTURE",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 171,
+   "x": 176,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 172,
+  "internal": "ITEM_SOFT_BED_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 172,
+   "x": 192,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 173,
+  "internal": "ITEM_GOLD_BED_DYED_GENERIC",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 173,
+   "x": 208,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 174,
+  "internal": "ITEM_BLACK_WINDOW",
+  "name": "BLACK WINDOW",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 174,
+   "x": 224,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 175,
+  "internal": "ITEM_MAGNET",
+  "name": "MAGNET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 175,
+   "x": 240,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 176,
+  "internal": "ITEM_COPPER_BOILER",
+  "name": "COPPER BOILER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 176,
+   "x": 256,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 177,
+  "internal": "ITEM_MOTOR",
+  "name": "ELECTRIC MOTOR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 177,
+   "x": 272,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 178,
+  "internal": "ITEM_COPPER_WIRE",
+  "name": "COPPER WIRE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 178,
+   "x": 288,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 179,
+  "internal": "ITEM_STEAM_ENGINE",
+  "name": "STEAM ENGINE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 179,
+   "x": 304,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 180,
+  "internal": "ITEM_POT",
+  "name": "IRON POT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 180,
+   "x": 320,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 181,
+  "internal": "ITEM_FISH_CURRY",
+  "name": "FISH CURRY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 181,
+   "x": 336,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 182,
+  "internal": "ITEM_DODO_STEW",
+  "name": "DODO STEW",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 182,
+   "x": 352,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 183,
+  "internal": "ITEM_ICE_TORCH",
+  "name": "ICE TORCH",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 183,
+   "x": 368,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 184,
+  "internal": "ITEM_SILICON_INGOT",
+  "name": "SILICON INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 184,
+   "x": 384,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 185,
+  "internal": "ITEM_SILICON_CRYSTAL",
+  "name": "SILICON CRYSTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 185,
+   "x": 400,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 186,
+  "internal": "ITEM_SILICON_WAFER",
+  "name": "SILICON WAFER",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 186,
+   "x": 416,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 187,
+  "internal": "ITEM_TIN_PANTS",
+  "name": "TIN ARMOR LEGGINGS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 187,
+   "x": 432,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 188,
+  "internal": "ITEM_TIN_CHEST_PLATE",
+  "name": "TIN CHEST PLATE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 188,
+   "x": 448,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 189,
+  "internal": "ITEM_TIN_HELMET",
+  "name": "TIN HELMET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 189,
+   "x": 464,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 190,
+  "internal": "ITEM_TIN_BOOTS",
+  "name": "TIN BOOTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 190,
+   "x": 480,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 191,
+  "internal": "ITEM_IRON_PANTS",
+  "name": "IRON ARMOR LEGGINGS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 191,
+   "x": 496,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 192,
+  "internal": "ITEM_IRON_CHEST_PLATE",
+  "name": "IRON CHEST PLATE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 192,
+   "x": 0,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 193,
+  "internal": "ITEM_IRON_HELMET",
+  "name": "IRON HELMET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 193,
+   "x": 16,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 194,
+  "internal": "ITEM_IRON_BOOTS",
+  "name": "IRON BOOTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 194,
+   "x": 32,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 195,
+  "internal": "ITEM_ICE_PANTS",
+  "name": "ICE ARMOR LEGGINGS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 195,
+   "x": 48,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 196,
+  "internal": "ITEM_ICE_CHEST_PLATE",
+  "name": "ICE CHEST PLATE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 196,
+   "x": 64,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 197,
+  "internal": "ITEM_ICE_HELMET",
+  "name": "ICE HELMET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 197,
+   "x": 80,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 198,
+  "internal": "ITEM_ICE_BOOTS",
+  "name": "ICE BOOTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 198,
+   "x": 96,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 199,
+  "internal": "ITEM_RAIL",
+  "name": "RAIL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 199,
+   "x": 112,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 200,
+  "internal": "ITEM_TRAIN_STATION",
+  "name": "TRAIN STATION",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 200,
+   "x": 128,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 201,
+  "internal": "ITEM_PIG_IRON",
+  "name": "PIG IRON",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 201,
+   "x": 144,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 202,
+  "internal": "ITEM_CRUSHED_LIMESTONE",
+  "name": "CRUSHED LIMESTONE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 202,
+   "x": 160,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 203,
+  "internal": "ITEM_TRAIN_WHEEL",
+  "name": "TRAIN WHEEL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 203,
+   "x": 176,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 204,
+  "internal": "ITEM_HANDCAR",
+  "name": "RAIL HANDCAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 204,
+   "x": 192,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 205,
+  "internal": "ITEM_STEAM_TRAIN",
+  "name": "STEAM LOCOMOTIVE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 205,
+   "x": 208,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 206,
+  "internal": "ITEM_FREIGHT_CAR",
+  "name": "FREIGHT CAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 206,
+   "x": 224,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 207,
+  "internal": "ITEM_DISPLAY_CABINET",
+  "name": "DISPLAY CABINET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 207,
+   "x": 240,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 208,
+  "internal": "ITEM_PASSENGER_CAR",
+  "name": "PASSENGER CAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 208,
+   "x": 256,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 209,
+  "internal": "ITEM_CROWBAR",
+  "name": "CROWBAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 209,
+   "x": 272,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 210,
+  "internal": "ITEM_TRADE_PORTAL",
+  "name": "TRADE PORTAL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 210,
+   "x": 288,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 211,
+  "internal": "ITEM_GOLD_CHEST_INDICATOR",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 211,
+   "x": 304,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 212,
+  "internal": "ITEM_PAINTING_L_S",
+  "name": "LARGE SQUARE PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 212,
+   "x": 320,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 213,
+  "internal": "ITEM_PAINTING_L_L",
+  "name": "LARGE LANDSCAPE PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 213,
+   "x": 336,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 214,
+  "internal": "ITEM_PAINTING_L_P",
+  "name": "LARGE PORTRAIT PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 214,
+   "x": 352,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 215,
+  "internal": "ITEM_PAINTING_M_S",
+  "name": "MED SQUARE PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 215,
+   "x": 368,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 216,
+  "internal": "ITEM_PAINTING_M_L",
+  "name": "MED LANDSCAPE PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 216,
+   "x": 384,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 217,
+  "internal": "ITEM_PAINTING_M_P",
+  "name": "MED PORTRAIT PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 217,
+   "x": 400,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 218,
+  "internal": "ITEM_PAINTING_S_S",
+  "name": "SMALL SQUARE PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 218,
+   "x": 416,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 219,
+  "internal": "ITEM_PAINTING_S_L",
+  "name": "SMALL LANDSCAPE PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 219,
+   "x": 432,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 220,
+  "internal": "ITEM_PAINTING_S_P",
+  "name": "SMALL PORTRAIT PAINTING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 220,
+   "x": 448,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 221,
+  "internal": "ITEM_EASEL",
+  "name": "EASEL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 221,
+   "x": 464,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 222,
+  "internal": "ITEM_STONE_COLUMN",
+  "name": "STONE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 222,
+   "x": 480,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 223,
+  "internal": "ITEM_LIMESTONE_COLUMN",
+  "name": "LIMESTONE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 223,
+   "x": 496,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 224,
+  "internal": "ITEM_MARBLE_COLUMN",
+  "name": "MARBLE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 224,
+   "x": 0,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 225,
+  "internal": "ITEM_SANDSTONE_COLUMN",
+  "name": "SANDSTONE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 225,
+   "x": 16,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 226,
+  "internal": "ITEM_RED_MARBLE_COLUMN",
+  "name": "RED MARBLE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 226,
+   "x": 32,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 227,
+  "internal": "ITEM_LAPIS_COLUMN",
+  "name": "LAPIS LAZULI COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 227,
+   "x": 48,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 228,
+  "internal": "ITEM_BASALT_COLUMN",
+  "name": "BASALT COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 228,
+   "x": 64,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 229,
+  "internal": "ITEM_STONE_STAIRS",
+  "name": "STONE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 229,
+   "x": 80,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 230,
+  "internal": "ITEM_LIMESTONE_STAIRS",
+  "name": "LIMESTONE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 230,
+   "x": 96,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 231,
+  "internal": "ITEM_MARBLE_STAIRS",
+  "name": "MARBLE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 231,
+   "x": 112,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 232,
+  "internal": "ITEM_SANDSTONE_STAIRS",
+  "name": "SANDSTONE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 232,
+   "x": 128,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 233,
+  "internal": "ITEM_RED_MARBLE_STAIRS",
+  "name": "RED MARBLE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 233,
+   "x": 144,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 234,
+  "internal": "ITEM_LAPIS_STAIRS",
+  "name": "LAPIS LAZULI STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 234,
+   "x": 160,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 235,
+  "internal": "ITEM_BASALT_STAIRS",
+  "name": "BASALT STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 235,
+   "x": 176,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 236,
+  "internal": "ITEM_COPPER_COLUMN",
+  "name": "COPPER COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 236,
+   "x": 192,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 237,
+  "internal": "ITEM_TIN_COLUMN",
+  "name": "TIN COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 237,
+   "x": 208,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 238,
+  "internal": "ITEM_BRONZE_COLUMN",
+  "name": "BRONZE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 238,
+   "x": 224,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 239,
+  "internal": "ITEM_IRON_COLUMN",
+  "name": "IRON COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 239,
+   "x": 240,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 240,
+  "internal": "ITEM_STEEL_COLUMN",
+  "name": "STEEL COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 240,
+   "x": 256,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 241,
+  "internal": "ITEM_GOLD_COLUMN",
+  "name": "GOLD COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 241,
+   "x": 272,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 242,
+  "internal": "ITEM_WOOD_COLUMN",
+  "name": "WOOD COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 242,
+   "x": 288,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 243,
+  "internal": "ITEM_BRICK_COLUMN",
+  "name": "BRICK COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 243,
+   "x": 304,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 244,
+  "internal": "ITEM_ICE_COLUMN",
+  "name": "ICE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 244,
+   "x": 320,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 245,
+  "internal": "ITEM_COPPER_STAIRS",
+  "name": "COPPER STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 245,
+   "x": 336,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 246,
+  "internal": "ITEM_TIN_STAIRS",
+  "name": "TIN STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 246,
+   "x": 352,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 247,
+  "internal": "ITEM_BRONZE_STAIRS",
+  "name": "BRONZE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 247,
+   "x": 368,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 248,
+  "internal": "ITEM_IRON_STAIRS",
+  "name": "IRON STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 248,
+   "x": 384,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 249,
+  "internal": "ITEM_STEEL_STAIRS",
+  "name": "STEEL STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 249,
+   "x": 400,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 250,
+  "internal": "ITEM_GOLD_STAIRS",
+  "name": "GOLD STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 250,
+   "x": 416,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 251,
+  "internal": "ITEM_WOOD_STAIRS",
+  "name": "WOOD STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 251,
+   "x": 432,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 252,
+  "internal": "ITEM_BRICK_STAIRS",
+  "name": "BRICK STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 252,
+   "x": 448,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 253,
+  "internal": "ITEM_ICE_STAIRS",
+  "name": "ICE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 253,
+   "x": 464,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 254,
+  "internal": "ITEM_STEEL_DOWNLIGHT",
+  "name": "STEEL DOWNLIGHT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 254,
+   "x": 480,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 255,
+  "internal": "ITEM_POISON",
+  "name": "POISON",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 255,
+   "x": 496,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 256,
+  "internal": "ITEM_POISON_ARROW",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 256,
+   "x": 0,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 257,
+  "internal": "ITEM_POISON_BOW",
+  "name": "GOLD BOW & POISON ARROWS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 257,
+   "x": 16,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 258,
+  "internal": "ITEM_STEEL_UPLIGHT",
+  "name": "STEEL UPLIGHT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 258,
+   "x": 32,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 259,
+  "internal": "ITEM_WORLD_CREDIT",
+  "name": "WORLD CREDIT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 259,
+   "x": 48,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 260,
+  "internal": "ITEM_PLATINUM_COIN",
+  "name": "PLATINUM COIN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 260,
+   "x": 64,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "COINS"
+ },
+ {
+  "id": 261,
+  "internal": "ITEM_PLATINUM_ORE",
+  "name": "PLATINUM NUGGET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 261,
+   "x": 80,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 262,
+  "internal": "ITEM_PLATINUM_INGOT",
+  "name": "PLATINUM INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 262,
+   "x": 96,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 263,
+  "internal": "ITEM_PLATINUM_STAIRS",
+  "name": "PLATINUM STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 263,
+   "x": 112,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 264,
+  "internal": "ITEM_PLATINUM_COLUMN",
+  "name": "PLATINUM COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 264,
+   "x": 128,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 265,
+  "internal": "ITEM_GLASS_STAIRS",
+  "name": "GLASS STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 265,
+   "x": 144,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 266,
+  "internal": "ITEM_GLASS_COLUMN",
+  "name": "GLASS COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 266,
+   "x": 160,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 267,
+  "internal": "ITEM_BLACK_GLASS_STAIRS",
+  "name": "BLACK GLASS STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 267,
+   "x": 176,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 268,
+  "internal": "ITEM_BLACK_GLASS_COLUMN",
+  "name": "BLACK GLASS COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 268,
+   "x": 192,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 269,
+  "internal": "ITEM_FUEL",
+  "name": "FUEL",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 269,
+   "x": 208,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 270,
+  "internal": "ITEM_WORKBENCH_REFINERY",
+  "name": "REFINERY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 270,
+   "x": 224,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 271,
+  "internal": "ITEM_EPOXY",
+  "name": "EPOXY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 271,
+   "x": 240,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 272,
+  "internal": "ITEM_RAW_RESIN",
+  "name": "RAW RESIN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 272,
+   "x": 256,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 273,
+  "internal": "ITEM_CARBON_FIBERS",
+  "name": "CARBON FIBERS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 273,
+   "x": 272,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 274,
+  "internal": "ITEM_CARBON_FIBER_SHEET",
+  "name": "CARBON FIBER SHEET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 274,
+   "x": 288,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 275,
+  "internal": "ITEM_CARBON_FIBER_WING",
+  "name": "CARBON FIBER WING",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 275,
+   "x": 304,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 276,
+  "internal": "ITEM_CARBON_FIBER_CHASSIS",
+  "name": "JETPACK CHASSIS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 276,
+   "x": 320,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 277,
+  "internal": "ITEM_JET_ENGINE",
+  "name": "JET ENGINE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 277,
+   "x": 336,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 278,
+  "internal": "ITEM_JETPACK",
+  "name": "JETPACK",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 278,
+   "x": 352,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 279,
+  "internal": "ITEM_TITANIUM_ORE",
+  "name": "TITANIUM ORE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 279,
+   "x": 368,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 280,
+  "internal": "ITEM_TITANIUM_INGOT",
+  "name": "TITANIUM INGOT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 280,
+   "x": 384,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 281,
+  "internal": "ITEM_TITANIUM_STAIRS",
+  "name": "TITANIUM STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 281,
+   "x": 400,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 282,
+  "internal": "ITEM_TITANIUM_COLUMN",
+  "name": "TITANIUM COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 282,
+   "x": 416,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 283,
+  "internal": "ITEM_CARBON_FIBER_STAIRS",
+  "name": "CARBON FIBER STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 283,
+   "x": 432,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 284,
+  "internal": "ITEM_CARBON_FIBER_COLUMN",
+  "name": "CARBON FIBER COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 284,
+   "x": 448,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 285,
+  "internal": "ITEM_TITANIUM_PICKAXE",
+  "name": "TITANIUM PICKAXE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 285,
+   "x": 464,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 286,
+  "internal": "ITEM_TITANIUM_SWORD",
+  "name": "TITANIUM SWORD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 286,
+   "x": 480,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 287,
+  "internal": "ITEM_TITANIUM_PANTS",
+  "name": "TITANIUM LEGGINGS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 287,
+   "x": 496,
+   "y": 128,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 288,
+  "internal": "ITEM_TITANIUM_CHEST_PLATE",
+  "name": "TITANIUM CHEST PLATE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 288,
+   "x": 0,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 289,
+  "internal": "ITEM_TITANIUM_HELMET",
+  "name": "TITANIUM HELMET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 289,
+   "x": 16,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 290,
+  "internal": "ITEM_TITANIUM_BOOTS",
+  "name": "TITANIUM BOOTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 290,
+   "x": 32,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 291,
+  "internal": "ITEM_CARBON_FIBER_PANTS",
+  "name": "CARBON FIBER LEGGINGS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 291,
+   "x": 48,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 292,
+  "internal": "ITEM_CARBON_FIBER_CHEST_PLATE",
+  "name": "CARBON FIBER CHEST PLATE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 292,
+   "x": 64,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 293,
+  "internal": "ITEM_CARBON_FIBER_HELMET",
+  "name": "CARBON FIBER HELMET",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 293,
+   "x": 80,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 294,
+  "internal": "ITEM_CARBON_FIBER_BOOTS",
+  "name": "CARBON FIBER BOOTS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 294,
+   "x": 96,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CLOTHING/ARMOR"
+ },
+ {
+  "id": 295,
+  "internal": "ITEM_VINE",
+  "name": "VINE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 295,
+   "x": 112,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 296,
+  "internal": "ITEM_TULIP_BULB",
+  "name": "TULIP BULB",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 296,
+   "x": 128,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 297,
+  "internal": "ITEM_TULIP_SEED",
+  "name": "TULIP SEED",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 297,
+   "x": 144,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 298,
+  "internal": "ITEM_MONEY",
+  "name": "UNKNOWN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 298,
+   "x": 160,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 299,
+  "internal": "ITEM_RANDOM_SLUICED_ORE",
+  "name": "RANDOM ORE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 299,
+   "x": 176,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 300,
+  "internal": "ITEM_WORKBENCH_SLUICE",
+  "name": "ELECTRIC SLUICE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 300,
+   "x": 192,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 301,
+  "internal": "ITEM_OWNERSHIP_SIGN",
+  "name": "OWNERSHIP SIGN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 301,
+   "x": 208,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 302,
+  "internal": "ITEM_CAGE",
+  "name": "CAGE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 302,
+   "x": 224,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 303,
+  "internal": "ITEM_DODO_CAGE",
+  "name": "CAGED DODO",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 303,
+   "x": 240,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 304,
+  "internal": "ITEM_GATE",
+  "name": "WOODEN GATE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 304,
+   "x": 256,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 305,
+  "internal": "ITEM_AMETHYST_SHARD",
+  "name": "AMETHYST SHARD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 305,
+   "x": 272,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 306,
+  "internal": "ITEM_SAPPHIRE_SHARD",
+  "name": "SAPPHIRE SHARD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 306,
+   "x": 288,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 307,
+  "internal": "ITEM_EMERALD_SHARD",
+  "name": "EMERALD SHARD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 307,
+   "x": 304,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 308,
+  "internal": "ITEM_RUBY_SHARD",
+  "name": "RUBY SHARD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 308,
+   "x": 320,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 309,
+  "internal": "ITEM_DIAMOND_SHARD",
+  "name": "DIAMOND SHARD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 309,
+   "x": 336,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORE/INGOTS"
+ },
+ {
+  "id": 310,
+  "internal": "ITEM_WHEAT",
+  "name": "WHEAT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 310,
+   "x": 352,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 311,
+  "internal": "ITEM_FLOUR",
+  "name": "FLOUR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 311,
+   "x": 368,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 312,
+  "internal": "ITEM_YEAST",
+  "name": "YEAST",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 312,
+   "x": 384,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 313,
+  "internal": "ITEM_SALT",
+  "name": "SALT",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 313,
+   "x": 400,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 314,
+  "internal": "ITEM_DOUGH",
+  "name": "DOUGH",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 314,
+   "x": 416,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 315,
+  "internal": "ITEM_BREAD",
+  "name": "BREAD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 315,
+   "x": 432,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 316,
+  "internal": "ITEM_TOMATO",
+  "name": "TOMATO",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 316,
+   "x": 448,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 317,
+  "internal": "ITEM_PIZZA",
+  "name": "PIZZA",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 317,
+   "x": 464,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 318,
+  "internal": "ITEM_FLATBREAD",
+  "name": "FLATBREAD",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 318,
+   "x": 480,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 319,
+  "internal": "ITEM_MILK_BUCKET",
+  "name": "MILK",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 319,
+   "x": 496,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 320,
+  "internal": "ITEM_MOZZARELLA",
+  "name": "MOZZARELLA",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 320,
+   "x": 0,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 321,
+  "internal": "ITEM_YAK_HORN",
+  "name": "YAK HORN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 321,
+   "x": 16,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 322,
+  "internal": "ITEM_RAZOR",
+  "name": "RAZOR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 322,
+   "x": 32,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "TOOLS/WEAPONS"
+ },
+ {
+  "id": 323,
+  "internal": "ITEM_YAK_SHAVINGS",
+  "name": "YAK SHAVINGS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 323,
+   "x": 48,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 324,
+  "internal": "ITEM_DONKEY_CAGE",
+  "name": "CAGED DONKEY",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 324,
+   "x": 64,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 325,
+  "internal": "ITEM_YAK_CAGE",
+  "name": "CAGED YAK",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 325,
+   "x": 80,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 326,
+  "internal": "ITEM_DROPBEAR_CAGE",
+  "name": "CAGED DROPBEAR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 326,
+   "x": 96,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 327,
+  "internal": "ITEM_SCORPION_CAGE",
+  "name": "CAGED SCORPION",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 327,
+   "x": 112,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 328,
+  "internal": "ITEM_RAINBOW_CAKE",
+  "name": "RAINBOW CAKE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 328,
+   "x": 128,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 329,
+  "internal": "ITEM_RAINBOW_ESSENCE",
+  "name": "RAINBOW ESSENCE",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 329,
+   "x": 144,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "ORGANIC/FOOD"
+ },
+ {
+  "id": 330,
+  "internal": "ITEM_UNICORN_CAGE",
+  "name": "CAGED UNICORN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 330,
+   "x": 160,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 331,
+  "internal": "ITEM_MIRROR",
+  "name": "MIRROR",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 331,
+   "x": 176,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 332,
+  "internal": "ITEM_PLASTER_COLUMN",
+  "name": "PLASTER COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 332,
+   "x": 192,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 333,
+  "internal": "ITEM_PLASTER_STAIRS",
+  "name": "PLASTER STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 333,
+   "x": 208,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 334,
+  "internal": "ITEM_AMETHYST_COLUMN",
+  "name": "AMETHYST COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 334,
+   "x": 224,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 335,
+  "internal": "ITEM_SAPPHIRE_COLUMN",
+  "name": "SAPPHIRE COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 335,
+   "x": 240,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 336,
+  "internal": "ITEM_EMERALD_COLUMN",
+  "name": "EMERALD COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 336,
+   "x": 256,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 337,
+  "internal": "ITEM_RUBY_COLUMN",
+  "name": "RUBY COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 337,
+   "x": 272,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 338,
+  "internal": "ITEM_DIAMOND_COLUMN",
+  "name": "DIAMOND COLUMN",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 338,
+   "x": 288,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 339,
+  "internal": "ITEM_AMETHYST_STAIRS",
+  "name": "AMETHYST STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 339,
+   "x": 304,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 340,
+  "internal": "ITEM_SAPPHIRE_STAIRS",
+  "name": "SAPPHIRE STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 340,
+   "x": 320,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 341,
+  "internal": "ITEM_EMERALD_STAIRS",
+  "name": "EMERALD STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 341,
+   "x": 336,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 342,
+  "internal": "ITEM_RUBY_STAIRS",
+  "name": "RUBY STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 342,
+   "x": 352,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 343,
+  "internal": "ITEM_DIAMOND_STAIRS",
+  "name": "DIAMOND STAIRS",
+  "icon": {
+   "atlas": "Items.png",
+   "index": 343,
+   "x": 368,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "sprite"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1024,
+  "internal": "ITEM_COBBLESTONE",
+  "name": "STONE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 33,
+   "x": 16,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 33,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1025,
+  "internal": "ITEM_WORKBENCH_KILN",
+  "name": "KILN",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 344,
+   "x": 384,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 345,
+   "source": "FUN_10021cdc8(workbenchType=8, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1026,
+  "internal": "ITEM_RED_BRICKS",
+  "name": "RED BRICKS",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 34,
+   "x": 32,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 34,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1027,
+  "internal": "ITEM_LIMESTONE",
+  "name": "LIMESTONE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 66,
+   "x": 32,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 66,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1028,
+  "internal": "ITEM_LIMESTONE_BLOCK",
+  "name": "LIMESTONE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 35,
+   "x": 48,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 35,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1029,
+  "internal": "ITEM_MARBLE",
+  "name": "MARBLE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 67,
+   "x": 48,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 67,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1030,
+  "internal": "ITEM_MARBLE_BLOCK",
+  "name": "MARBLE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 76,
+   "x": 192,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 76,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1031,
+  "internal": "ITEM_WORKBENCH_FURNACE",
+  "name": "FURNACE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 324,
+   "x": 64,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 325,
+   "source": "FUN_10021cdc8(workbenchType=9, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1032,
+  "internal": "ITEM_WORKBENCH_WOOD",
+  "name": "WOODWORK BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 336,
+   "x": 256,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 337,
+   "source": "FUN_10021cdc8(workbenchType=5, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1033,
+  "internal": "ITEM_WORKBENCH_WEAVE",
+  "name": "TAILOR'S BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 338,
+   "x": 288,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 339,
+   "source": "FUN_10021cdc8(workbenchType=4, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1034,
+  "internal": "ITEM_WORKBENCH_PRESS",
+  "name": "PRESS",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 340,
+   "x": 320,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 341,
+   "source": "FUN_10021cdc8(workbenchType=7, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1035,
+  "internal": "ITEM_SANDSTONE",
+  "name": "SANDSTONE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 79,
+   "x": 240,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 79,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1036,
+  "internal": "ITEM_SANDSTONE_BLOCK",
+  "name": "SANDSTONE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 80,
+   "x": 256,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 80,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1037,
+  "internal": "ITEM_RED_MARBLE",
+  "name": "RED MARBLE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 81,
+   "x": 272,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 81,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1038,
+  "internal": "ITEM_RED_MARBLE_BLOCK",
+  "name": "RED MARBLE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 82,
+   "x": 288,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 82,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1039,
+  "internal": "ITEM_FLAX_MAT",
+  "name": "WOVEN FLAX MAT",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 32,
+   "x": 0,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 32,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1040,
+  "internal": "ITEM_FLAX_MAT_YELLOW",
+  "name": "YELLOW FLAX MAT",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 32,
+   "x": 0,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 32,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1041,
+  "internal": "ITEM_FLAX_MAT_RED",
+  "name": "RED FLAX MAT",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 32,
+   "x": 0,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 32,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1042,
+  "internal": "ITEM_GLASS",
+  "name": "GLASS",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 108,
+   "x": 192,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 108,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1043,
+  "internal": "ITEM_CHEST",
+  "name": "CHEST",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 342,
+   "x": 352,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 342,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 1044,
+  "internal": "ITEM_WATER",
+  "name": "UNKNOWN",
+  "icon": null,
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1045,
+  "internal": "ITEM_GOLD_BLOCK",
+  "name": "GOLD BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 85,
+   "x": 336,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 85,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1046,
+  "internal": "ITEM_WORKBENCH_UPGRADE_OLD_UNUSED",
+  "name": "UNKNOWN",
+  "icon": null,
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1047,
+  "internal": "ITEM_ROCK",
+  "name": "ROCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 32,
+   "x": 0,
+   "y": 16,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 32,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1048,
+  "internal": "ITEM_DIRT",
+  "name": "DIRT",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 64,
+   "x": 0,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 64,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1049,
+  "internal": "ITEM_WOOD",
+  "name": "WOOD",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 196,
+   "x": 64,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 196,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1050,
+  "internal": "ITEM_WORKBENCH_WORKBENCH",
+  "name": "WORKBENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 320,
+   "x": 0,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 321,
+   "source": "FUN_10021cdc8(workbenchType=2, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1051,
+  "internal": "ITEM_SAND",
+  "name": "SAND",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 65,
+   "x": 16,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 65,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1052,
+  "internal": "ITEM_WORKBENCH_TOOL",
+  "name": "TOOL BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 322,
+   "x": 32,
+   "y": 160,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 323,
+   "source": "FUN_10021cdc8(workbenchType=6, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1053,
+  "internal": "ITEM_LAPIS",
+  "name": "LAPIS LAZULI",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 86,
+   "x": 352,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 86,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1054,
+  "internal": "ITEM_LAPIS_BLOCK",
+  "name": "LAPIS LAZULI",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 87,
+   "x": 368,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 87,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1055,
+  "internal": "ITEM_WORKBENCH_CRAFT",
+  "name": "CRAFT BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 378,
+   "x": 416,
+   "y": 176,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 379,
+   "source": "FUN_10021cdc8(workbenchType=10, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1056,
+  "internal": "ITEM_WORKBENCH_MIX",
+  "name": "MIXING BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 374,
+   "x": 352,
+   "y": 176,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 375,
+   "source": "FUN_10021cdc8(workbenchType=11, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1057,
+  "internal": "ITEM_WOODEN_PLATFORM",
+  "name": "REINFORCED PLATFORM",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 164,
+   "x": 64,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 164,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1058,
+  "internal": "ITEM_FREEZE_WATER",
+  "name": "UNKNOWN",
+  "icon": null,
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1059,
+  "internal": "ITEM_MELT_WATER",
+  "name": "UNKNOWN",
+  "icon": null,
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1060,
+  "internal": "ITEM_ICE",
+  "name": "ICE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 110,
+   "x": 224,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 110,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1061,
+  "internal": "ITEM_WORKBENCH_DYE",
+  "name": "DYE BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 376,
+   "x": 384,
+   "y": 176,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 377,
+   "source": "FUN_10021cdc8(workbenchType=12, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1062,
+  "internal": "ITEM_COMPOST",
+  "name": "COMPOST",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 97,
+   "x": 16,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 97,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1063,
+  "internal": "ITEM_BASALT",
+  "name": "BASALT",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 88,
+   "x": 384,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 88,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1064,
+  "internal": "ITEM_BASALT_UNMINED",
+  "name": "BASALT",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 88,
+   "x": 384,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 88,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1065,
+  "internal": "ITEM_SAFE",
+  "name": "SAFE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 298,
+   "x": 160,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 298,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 1066,
+  "internal": "ITEM_COPPER_BLOCK",
+  "name": "COPPER BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 112,
+   "x": 256,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 112,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1067,
+  "internal": "ITEM_TIN_BLOCK",
+  "name": "TIN BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 113,
+   "x": 272,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 113,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1068,
+  "internal": "ITEM_BRONZE_BLOCK",
+  "name": "BRONZE BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 114,
+   "x": 288,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 114,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1069,
+  "internal": "ITEM_IRON_BLOCK",
+  "name": "IRON BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 115,
+   "x": 304,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 115,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1070,
+  "internal": "ITEM_STEEL_BLOCK",
+  "name": "STEEL BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 116,
+   "x": 320,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 116,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1071,
+  "internal": "ITEM_WORKBENCH_METALWORK",
+  "name": "METALWORK BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 300,
+   "x": 192,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 301,
+   "source": "FUN_10021cdc8(workbenchType=14, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1072,
+  "internal": "ITEM_CHEST_GOLD",
+  "name": "GOLDEN CHEST",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 302,
+   "x": 224,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 302,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 1073,
+  "internal": "ITEM_TRADING_POST_OLD",
+  "name": "UNKNOWN",
+  "icon": null,
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1074,
+  "internal": "ITEM_CHEST_PORTAL",
+  "name": "PORTAL CHEST",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 311,
+   "x": 368,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 311,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1075,
+  "internal": "ITEM_BLACK_SAND",
+  "name": "BLACK SAND",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 89,
+   "x": 400,
+   "y": 32,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 89,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1076,
+  "internal": "ITEM_BLACK_GLASS",
+  "name": "BLACK GLASS",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 117,
+   "x": 336,
+   "y": 48,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 117,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1077,
+  "internal": "ITEM_STEAM_GENERATOR",
+  "name": "STEAM GENERATOR",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 315,
+   "x": 432,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 316,
+   "source": "FUN_10021cdc8(workbenchType=15, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 1078,
+  "internal": "ITEM_WORKBENCH_ELECTRIC_KILN",
+  "name": "ELECTRIC KILN",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 317,
+   "x": 464,
+   "y": 144,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 318,
+   "source": "FUN_10021cdc8(workbenchType=16, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1079,
+  "internal": "ITEM_WORKBENCH_ELECTRIC_FURNACE",
+  "name": "ELECTRIC FURNACE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 474,
+   "x": 416,
+   "y": 224,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 475,
+   "source": "FUN_10021cdc8(workbenchType=17, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1080,
+  "internal": "ITEM_WORKBENCH_ELECTRIC_METALWORK_BENCH",
+  "name": "ELECTRIC METALWORK BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 476,
+   "x": 448,
+   "y": 224,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 477,
+   "source": "FUN_10021cdc8(workbenchType=18, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1081,
+  "internal": "ITEM_WORKBENCH_ELECTRIC_STOVE",
+  "name": "ELECTRIC STOVE",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 544,
+   "x": 0,
+   "y": 272,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 545,
+   "source": "FUN_10021cdc8(workbenchType=19, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1082,
+  "internal": "ITEM_SOLAR_PANEL",
+  "name": "SOLAR PANEL",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 547,
+   "x": 48,
+   "y": 272,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 548,
+   "source": "FUN_10021cdc8(workbenchType=20, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 1083,
+  "internal": "ITEM_FLYWHEEL",
+  "name": "FLYWHEEL",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 549,
+   "x": 80,
+   "y": 272,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 550,
+   "source": "FUN_10021cdc8(workbenchType=21, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 1084,
+  "internal": "ITEM_ARMOR_BENCH",
+  "name": "ARMOR BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 506,
+   "x": 416,
+   "y": 240,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 507,
+   "source": "FUN_10021cdc8(workbenchType=22, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1085,
+  "internal": "ITEM_TRAIN_YARD",
+  "name": "TRAIN YARD",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 536,
+   "x": 384,
+   "y": 256,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 537,
+   "source": "FUN_10021cdc8(workbenchType=23, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1086,
+  "internal": "ITEM_WORKBENCH_BUILD",
+  "name": "BUILDER'S BENCH",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 540,
+   "x": 448,
+   "y": 256,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 541,
+   "source": "FUN_10021cdc8(workbenchType=25, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1087,
+  "internal": "ITEM_ELEVATOR_SHAFT",
+  "name": "ELEVATOR SHAFT",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 583,
+   "x": 112,
+   "y": 288,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 583,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 1088,
+  "internal": "ITEM_ELEVATOR_MOTOR",
+  "name": "ELECTRIC ELEVATOR MOTOR",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 584,
+   "x": 128,
+   "y": 288,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 584,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "HI-TECH"
+ },
+ {
+  "id": 1089,
+  "internal": "ITEM_PLATINUM_BLOCK",
+  "name": "PLATINUM BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 672,
+   "x": 0,
+   "y": 336,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 672,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1090,
+  "internal": "ITEM_CARBON_FIBER_BLOCK",
+  "name": "CARBON FIBER BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 188,
+   "x": 448,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 188,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1091,
+  "internal": "ITEM_TITANIUM_BLOCK",
+  "name": "TITANIUM BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 190,
+   "x": 480,
+   "y": 80,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 190,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1092,
+  "internal": "ITEM_GOLD_COIN_TRADE_FOR_COPPER_COINS",
+  "name": "UNKNOWN",
+  "icon": null,
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1093,
+  "internal": "ITEM_WORKBENCH_ELECTRIC_PRESS",
+  "name": "ELECTRIC PRESS",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 636,
+   "x": 448,
+   "y": 304,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 637,
+   "source": "FUN_10021cdc8(workbenchType=27, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1094,
+  "internal": "ITEM_GRAVEL",
+  "name": "GRAVEL",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 478,
+   "x": 480,
+   "y": 224,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 478,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1095,
+  "internal": "ITEM_COMPOST_BIN",
+  "name": "COMPOST BIN",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 664,
+   "x": 384,
+   "y": 320,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 665,
+   "source": "FUN_10021cdc8(workbenchType=28, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1096,
+  "internal": "ITEM_WORKBENCH_EGG_EXTRACTOR",
+  "name": "EGG EXTRACTOR",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 736,
+   "x": 0,
+   "y": 368,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 737,
+   "source": "FUN_10021cdc8(workbenchType=30, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1097,
+  "internal": "ITEM_WORKBENCH_PIZZA_OVEN",
+  "name": "PIZZA OVEN",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 739,
+   "x": 48,
+   "y": 368,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 740,
+   "source": "FUN_10021cdc8(workbenchType=31, level=0, expert=0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": false,
+  "startingItemCategory": null
+ },
+ {
+  "id": 1098,
+  "internal": "ITEM_AMETHYST_BLOCK",
+  "name": "AMETHYST BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 697,
+   "x": 400,
+   "y": 336,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 697,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1099,
+  "internal": "ITEM_SAPPHIRE_BLOCK",
+  "name": "SAPPHIRE BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 698,
+   "x": 416,
+   "y": 336,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 698,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1100,
+  "internal": "ITEM_EMERALD_BLOCK",
+  "name": "EMERALD BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 699,
+   "x": 432,
+   "y": 336,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 699,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1101,
+  "internal": "ITEM_RUBY_BLOCK",
+  "name": "RUBY BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 700,
+   "x": 448,
+   "y": 336,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 700,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1102,
+  "internal": "ITEM_DIAMOND_BLOCK",
+  "name": "DIAMOND BLOCK",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 701,
+   "x": 464,
+   "y": 336,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 701,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1103,
+  "internal": "ITEM_PLASTER",
+  "name": "PLASTER",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 741,
+   "x": 80,
+   "y": 368,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 741,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ },
+ {
+  "id": 1104,
+  "internal": "ITEM_CHEST_FEEDER",
+  "name": "FEEDER CHEST",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 742,
+   "x": 96,
+   "y": 368,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 742,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "CRAFTED/MISC"
+ },
+ {
+  "id": 1105,
+  "internal": "ITEM_LUMINOUS_PLASTER",
+  "name": "LUMINOUS PLASTER",
+  "icon": {
+   "atlas": "TileMap.png",
+   "index": 746,
+   "x": 160,
+   "y": 368,
+   "w": 16,
+   "h": 16,
+   "hdScale": 4,
+   "kind": "cube",
+   "topIndex": 746,
+   "source": "FUN_1000d8630(type,0)"
+  },
+  "maxStack": 99,
+  "startingItemAllowed": true,
+  "startingItemCategory": "BLOCKS"
+ }
+]

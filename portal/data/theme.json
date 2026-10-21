@@ -1,0 +1,165 @@
+{
+  "_notes": {
+    "source": "iOS 1.7.4 decomp build/re/decomp-ios/*.c + constants read from build/re/ios/Blockheads (Mach-O __TEXT/__DATA). Assets: APK 1.7.6 assets/.",
+    "coords": "GL UI (MJView frames) use points in a centre-origin, y-up space: x in [-halfW,halfW], y in [-halfH,halfH]; a frame {x,y,w,h} has (x,y) at its BOTTOM-left. CSS: left = halfW + x, top = halfH - (y + h).",
+    "layoutClass": "'phone' = screenWidth<415 || screenHeight<415 (iOS points, landscape). Then f=0.75, else f=1. S = 160 if screenWidth<415 else 200.",
+    "blend": "GL UI uses premultiplied blending glBlendFunc(ONE, ONE_MINUS_SRC_ALPHA); textures are tinted multiplicatively: frag = tex * color.",
+    "certainty": "'certain' = read directly from code/data; 'derived' = computed from code; 'uncertain' = decompiler ambiguity or not found."
+  },
+  "mainMenuBackground": {
+    "certainty": "certain (MainMenuUI::initWithDelegate..., MainMenuUI::render:projectionMatrix:)",
+    "clearColor": "unknown (backdrop fully covered by the rotated quad)",
+    "texture": "GameResources/mainMenuBackground.png (128x128), GL_LINEAR, CLAMP_TO_EDGE, shader StandardObject (untinted)",
+    "quad": "square centred on screen, side = 3 * max(halfW, halfH) (i.e. +-1.5*max), full texture, image upright",
+    "rotation": {"radPerSecond": 0.15, "plusScrollTerm": "-0.002 * currentScroll (rad)", "axis": "z (screen)", "directionNote": "positive = CCW in y-up GL (uncertain sign after decompile)"},
+    "stars": {
+      "certainty": "certain data, derived transform",
+      "data": "stars.json (2048 x [dx,dy,dz,w]; unit-sphere directions + brightness w in 1.8..8.43) dumped from DAT_1005b15d8",
+      "draw": "GL_POINTS, additive glBlendFunc(ONE,ONE), shader Star.vsh/fsh: v = pow(w*screenScale/4, 2); gl_PointSize = max(v,1) device px; colour = vec4(v) (white, clamps at 1)",
+      "transform": "projection = GameView perspective (fov_y = 60deg * min(pinchScale,1), times h/w when h<w; near 1) * Rz(-0.0005*scroll) * R(2pi*a0) * R(2pi*a1) * R(2pi*a2) * scale 64; camera at sphere centre",
+      "drift": "3 angles a_i: a_i += dt * speed_i * 0.01; speed_i = (1-dt)*speed_i + dt*goal_i; goal_i = rand[-1,1] rerolled when timer_i (rand[0,1], -= 0.05/s) hits 0",
+      "uncertain": "exact axes of the three rotations and pinchScale on the menu"
+    },
+    "clocks": {
+      "certainty": "certain (MainMenuUI::setClockPositions, render)",
+      "count": 5,
+      "faceTexture": "GameResources/clockFace.png (52x52, GL_LINEAR)",
+      "handTexture": "GameResources/clockHand.png (16x64, GL_LINEAR)",
+      "faceTint_premultiplied_rgba": [0.06, 0.06, 0.06, 0.03],
+      "handTint_premultiplied_rgba": [0.12, 0.12, 0.12, 0.12],
+      "cssHint": "face ~ clockFace drawn as near-additive light at ~6% (screen blend, opacity .06); hands ~ opacity .12",
+      "positions_centreOrigin_yUp": [
+        {"i":0, "cx":"-0.50*halfW", "cy":"-0.83*halfH", "halfSize":"0.42*halfW"},
+        {"i":1, "cx":"-0.86*halfW", "cy":"0.76*halfH",  "halfSize":"0.39*halfH"},
+        {"i":2, "cx":"0.92*halfW",  "cy":"-0.12*halfH", "halfSize":"0.31*halfH"},
+        {"i":3, "cx":"0.23*halfW",  "cy":"-0.45*halfH", "halfSize":"0.23*halfH"},
+        {"i":4, "cx":"0.64*halfW",  "cy":"0.64*halfH",  "halfSize":"0.40*halfW"}
+      ],
+      "faceQuad": "cx +- halfSize, cy +- halfSize",
+      "minuteHand": "pivot at clock centre; quad x in [-s/12, s/12], y in [-s/12, +2s/3] (s=halfSize); angle = 5*(value_i - k_i*scroll) rad",
+      "hourHand": "same pivot; quad x in [-s/12, s/12], y in [-s/12, +5s/12]; angle = minuteAngle/12",
+      "k_i": "0.01*i - 0.025  -> [-0.025,-0.015,-0.005,0.005,0.015]",
+      "animation": "value_i += dt*speed_i*0.5; speed_i = (1-dt)*speed_i + dt*goal_i; goal_i = rand[-1,1] rerolled when timer_i (rand[0,1], -= 0.2/s) <= 0; initial value/speed/goal rand[-1,1]",
+      "drawOrder": "background, stars(additive), 5 faces, then hands per clock (minute then hour)"
+    },
+    "clouds": "none on the main menu (cloud1-6.png are World sky only) - certain (no reference in MainMenuUI)",
+    "modalDim_BlockBackground": {"rgba": [0.06438, 0.12877, 0.35119, 0.67], "fadeIn_s": 0.3, "source": "BlockBackground::init, BlockAlertView::showNow"}
+  },
+  "portals": {
+    "certainty": "certain (MainMenuUI::render), rect verified by cropping TileMap.png",
+    "texture": "GameResources/TileMap.png (512x512 => 32x32 grid of 16px tiles), shader StandardObject, untinted",
+    "sourceRect": "tile index t -> col = t%32, row = t/32; source = x col*16, y (row-1)*16, w 16, h 32 (two tiles tall, upright)",
+    "tileIndex": {
+      "createWorld (index -2)": 131,
+      "joinWorld (index -1)": 62,
+      "world, portalLevel L in 1..5": "688 - 64*(L-1) + anim",
+      "world, other level": "100 + anim"
+    },
+    "sourceRects_px": {
+      "createWorld": [48, 48, 16, 32],
+      "joinWorld": [480, 0, 16, 32],
+      "level1": "[256 + 16*anim, 320, 16, 32]",
+      "level2": "[256 + 16*anim, 288, 16, 32]",
+      "level3": "[256 + 16*anim, 256, 16, 32]",
+      "level4": "[256 + 16*anim, 224, 16, 32]",
+      "level5": "[256 + 16*anim, 192, 16, 32]",
+      "fallback": "[64 + 16*anim, 32, 16, 32]"
+    },
+    "animation": "anim 0..7, +1 every 0.2 s, wraps 7->0 (8 frames, 1.6 s); only world portals animate, create/join are static",
+    "glow": "no separate glow pass - glow is in the tile art",
+    "basePortalPos": "x 0; y = 256 (non-phone) else min(176 if screenHeight>=415 else 140, halfH-40)",
+    "xOfPortal_i": "scroll - f*S*(i+1)  (i=-2 create, -1 join, 0.. worlds); per decompile create sits at +f*S (uncertain sign/ordering)",
+    "proximity": "p = max(0, 1 - |x_i| / (S*f))",
+    "portalScale": "ps = 1 + 0.5p (snaps to 1.5 above 1.45)",
+    "quad": "centre (x_i, baseY); halfW = 15*ps (20*ps when not phone... code: 20 only if both dims >=415), halfH = 30*ps (40*ps likewise)",
+    "label": {
+      "font": "BitmapFont standardFont = Fonts/Blockheads_64 at scale 0.25 (16pt), white [1,1,1,1], centred, box 256x16",
+      "text": "'CREATE WORLD', 'JOIN WORLD', or world name uppercased",
+      "scale": "ls = 1 + p (snaps to 2.0 above 1.95)",
+      "position": "x = x_i, y = baseY - f*ps*40 - 16*ls (text drawn with model scale ls)"
+    },
+    "previewImage": "selected world's 320x320 preview, masked by GameResources/portalPreviewMask.png (mask.r), alpha 0.67*(1-2|offset|) - partially uncertain geometry",
+    "scrollSnap": "velocity *= 1-min(8dt,1); eases to nearest portal (spacing f*S)"
+  },
+  "topBar": {
+    "certainty": "certain (MainMenuUI::initWithDelegate...)",
+    "settingsButton": "MJButton 40x40 at top-left (x = paddingLeft-halfW, y = halfH-paddingTop-42); bg InventoryButtonBackground.png / pressed InventoryButtonBackgroundSelected.png; glyph settingsCog.png in frame inset 4 (32x32)",
+    "timeCrystalButton": "MJButton (40+extraTextWidth)x40 at top-right (x = halfW-paddingRight-42-extra); same bg textures; crystal icon Items.png rect [176,0,16,16] (uv 0.34424..0.37451, 0.00049..0.06201) drawn 32x32; count text standardFont white right-aligned"
+  },
+  "buttons_GL": {
+    "certainty": "certain (MJButton::renderFrame, MJControl touch methods)",
+    "textures": {
+      "blue": ["InventoryButtonBackground.png", "InventoryButtonBackgroundSelected.png"],
+      "green": ["InventoryButtonBackgroundGreen.png", "InventoryButtonBackgroundSelectedGreen.png"],
+      "red": ["InventoryButtonBackgroundRed.png", "InventoryButtonBackgroundSelectedRed.png"],
+      "smallScreens": ["InventoryButtonBackground30.png", "InventoryButtonBackground30Selected.png"],
+      "sizes_px": "80x80 (30-variant 60x60)"
+    },
+    "slicing": "3-slice horizontal only: left cap = left half of image drawn h/2 wide, right cap = right half drawn h/2 wide, middle = the single texel column at u=0.5 stretched; full image height stretched to frame height. CSS: border-image: url(img) 0 40 fill / 0 calc(h/2) stretch (for 80px image). Buttons without a title (glyph only) stretch the whole image. dontStretch (toggle) uses w/2 caps.",
+    "pressed": "touch-down shows the Selected texture while finger is inside; tap animation: t=1 on touch, t -= 4*dt; scale = 1 - 0.125*(1 - 2*|t^2 - 0.5|) about centre (min 0.875, lasts 0.25 s); table cells disable it",
+    "disabled": "background tint rgb*0.67; title colour 0.5 grey",
+    "title": "standardFont (Blockheads_64 @0.25 = 16pt) white, alignment centre (default) / left = x+9 / right = x+w-9; text box y = frame.y + h/2 - 8 approx (createTitleWithColor)",
+    "examples": {
+      "PLAY": "226x40 green; tablet frame (-113,-324); landscape phone (4,-156)",
+      "OPTIONS...": "226x40 blue; tablet (-113,-276); landscape phone (-230,-156)"
+    },
+    "sounds": {"touchDown": "clickDown.wav", "activate(touchUp inside)": "click.wav"}
+  },
+  "toggleButton": {
+    "certainty": "certain (MJToggleButton)",
+    "textures": {"on": ["toggleButtonOn.png", "toggleButtonOnSelected.png"], "off": ["toggleButtonOff.png", "toggleButtonOffSelected.png"]},
+    "size_px": "160x80, drawn stretched to frame (dontStretch => caps w/2)",
+    "text": "'ON' offset -w/4 (left half) / 'OFF' offset +w/4 (right half); white standardFont"
+  },
+  "tableCells_customOptions": {
+    "certainty": "certain (TableViewUI::updateButtons)",
+    "row": "MJButton height 42, row pitch 40 (2px overlap), full table width",
+    "textures": {"normal": "tableCellBackgroundBlue.png (40x40)", "selected": "tableCellBackgroundGreen.png"},
+    "slicing": "same 3-slice, caps 21pt",
+    "title": "option name uppercased, left aligned (x+9), white 16pt",
+    "value": "right aligned titleB, colour [0.67,0.67,0.67,1], offset -20 (if it doesn't fit: value y-8, title y+8)",
+    "arrow": "arrowRightTxt.png glyph 16x16 at (x+w-24, y+14) for submenu/text-entry rows",
+    "slider": "MJSlider 140x32 at (x+w-180, y+6) using UI_slider.png / UI_sliderKnob.png; value text white (0.67 when disabled)",
+    "tapAnimation": "disabled"
+  },
+  "textEntry_GL": {
+    "certainty": "certain (CreateWorldUI world name button)",
+    "draw": "MJButton height 48 with NO background texture; glyph textEntry.png (80x80 white rounded outline, transparent centre) stretched to frame inset 4; text centred white 16pt",
+    "label": "'WORLD NAME:' right aligned, white 16pt, box 128x16"
+  },
+  "optionsPanel": {
+    "certainty": "certain (MainMenuOptionsUI::render)",
+    "dim": "full-screen ColoredNoTexture rgba [0.04314, 0.08627, 0.23529, 0.67] (premultiplied)",
+    "panel": "pauseBackground.png (528x640) drawn at 264x320 pt centred (x +-132, y +-160)"
+  },
+  "alertDialog_BlockAlertView_UIKit": {
+    "certainty": "certain except shadow offset (decompiled as 0,0)",
+    "panel": "alert-window.png (280x51; @2x/@3x) stretchableImage leftCap 0, topCap 38 => top 38px fixed, row 38 stretched, bottom 12px fixed; width = image width 280",
+    "dimBehind": "BlockBackground rgba [0.06438,0.12877,0.35119,0.67], fades in 0.3 s",
+    "fonts": "BlockheadsFont-Regular 16pt for title, message, buttons; white; shadowColor black, shadowOffset (0,0)",
+    "padding": "text inset 10 left/right (width-20); title then +10 gap",
+    "buttons": "UIButton height 40, row step 50, inset 10; two short buttons share a row (each (W-30)/2). Images InventoryButton* scaled to 40x40pt, capInsets trunc(6*screenScale) pt all sides; normal/highlighted = base/Selected",
+    "buttonColours": {"addButtonWithTitle (\"gray\")": "Green", "setCancelButton (\"black\")": "Blue (plain InventoryButtonBackground)", "setDestructiveButton (\"red\")": "Red"},
+    "showAnimation": "keyframes i=0..20, t=(i/20)^0.3, s=sin(-2*pi*t), scale = (t*(1-(s+1)) + (s+1))*0.2 + 0.8; duration 0.3 s",
+    "sounds": {"buttonDown": "clickDown.wav", "buttonClicked": "click.wav"},
+    "textPrompt": "BlockTextPromptAlertView field bg textEntryBackground.png (5x5) capInsets 2,2,2,2",
+    "tableSelection": "TableSelectionAlertView cells tableCellBackgroundGreen.png stretchable caps 4,4"
+  },
+  "fonts": {
+    "certainty": "certain (BitmapFont::standardFont/blackFont, BlockAlertView::initialize)",
+    "glUI": {"file": "GameResources/Fonts/Blockheads_64.fnt + .png", "size": 64, "scale": 0.25, "renderedPt": 16, "lineHeightPt": 19.25, "basePt": 14.25, "outlineAndShadow": "baked into glyph atlas (black outline + bottom-right drop shadow); no extra shadow pass", "tint": "multiplied: white default; disabled 0.5; secondary/value 0.67"},
+    "blackFont": "Fonts/Blockheadsblack_64 @0.25 (signs/in-world, not menus)",
+    "uikitDialogs": "BlockheadsFont-Regular.otf 16pt (alerts, chat buttons)",
+    "unused": "04b03*_16 fonts / 04B_03__.TTF: no reference in the iOS client code (uncertain whether nibs use them); HelveticaNeue 12 once"
+  },
+  "sounds": {
+    "certainty": "certain for clicks; none found for errors/portal-enter on the menu",
+    "buttonTouchDown": "clickDown.wav (MJControl::startTouch:, BlockAlertView::buttonDown:)",
+    "buttonActivate": "click.wav (MJControl::endTouch:, BlockAlertView::buttonClicked:)",
+    "uiPop": "menuPop.wav (UIManager::playUIPopSound - in-game panels)",
+    "error": "none in menu classes",
+    "portalWarp": "portal.wav exists but only Workbench (in-world portal) plays it; entering a world from the menu plays no SFX",
+    "music": "menu loops mountainKingLoop.mp4; on New/Continue/Join it fades out (fadeOutMP3PlaybackWithFinishNotificationObject) then largo.mp4 (GameView::mainMenuSoundFinshedFadingOut)",
+    "crystalPurchase": "timeCrystalBuy.wav"
+  }
+}
