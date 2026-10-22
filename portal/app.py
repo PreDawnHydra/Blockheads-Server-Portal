@@ -138,8 +138,11 @@ async def upload_assets(file: UploadFile = File(...), _=User):
 
 @app.get("/theme/stars.json")
 def stars():
-    # The menu background's star table (public: the login page draws it too).
-    return FileResponse(Path(__file__).resolve().parent / "data" / "stars.json", media_type="application/json")
+    # The menu background's star table, extracted from the APK (public: the login page draws it too).
+    f = config.ASSETS / "stars.json"
+    if not f.exists():
+        raise HTTPException(404, "No stars until the game's APK is uploaded.")
+    return FileResponse(f, media_type="application/json")
 
 
 @app.get("/api/rules")

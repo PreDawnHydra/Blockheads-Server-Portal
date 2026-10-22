@@ -6,6 +6,7 @@ itself does.
 """
 import json
 import shutil
+import struct
 import zipfile
 from pathlib import Path
 
@@ -20,7 +21,7 @@ COPY = [
     ("assets/GameResources/HDTex/Items.png", ()),
     ("assets/", (".png", ".otf")),
 ]
-VERSION = 1  # bump when the extraction changes, so existing installs re-extract from a fresh upload
+VERSION = 2  # bump when the extraction changes, so existing installs re-extract from a fresh upload
 
 
 def status() -> dict:
@@ -71,6 +72,9 @@ def extract(apk: Path, source_name: str | None = None) -> dict:
     if "res/drawable-xxhdpi-v4/icon.png" in names:
         with z.open("res/drawable-xxhdpi-v4/icon.png") as src, open(staging / "icon.png", "wb") as dst:
             shutil.copyfileobj(src, dst)
+    stars = find_stars(z.read(LIBRARY)) if LIBRARY in names else None
+    if stars:
+        (staging / "stars.json").write_text(json.dumps(stars))
     derive(staging)
     (staging / "extracted.json").write_text(json.dumps({"version": VERSION, "source": source_name or apk.name, "files": count}))
     old = config.ASSETS.with_name("assets.old")
@@ -80,6 +84,34 @@ def extract(apk: Path, source_name: str | None = None) -> dict:
     staging.rename(config.ASSETS)
     shutil.rmtree(old, ignore_errors=True)
     return status()
+
+
+# The main menu's star field: 2048 stars of 4 floats (a unit direction x, y, z and a brightness w of about 1.8 to
+# 8.5), a table in the game's code. In the 1.7.6 APK's library it sits at STARS_OFFSET; other builds are scanned.
+LIBRARY = "lib/armeabi-v7a/libApplication.so"
+STAR_COUNT, STARS_OFFSET = 2048, 14920084
+
+
+def _stars_at(lib: bytes, off: int) -> list | None:
+    if off < 0 or off + STAR_COUNT * 16 > len(lib):
+        return None
+    values = struct.unpack_from(f"<{STAR_COUNT * 4}f", lib, off)
+    stars = [list(values[i:i + 4]) for i in range(0, len(values), 4)]
+    for x, y, z, w in stars:
+        if not (0.98 < x * x + y * y + z * z < 1.02 and 1.0 < w < 10.0):
+            return None
+    return [[round(v, 6) for v in star] for star in stars]
+
+
+def find_stars(lib: bytes) -> list | None:
+    found = _stars_at(lib, STARS_OFFSET)
+    if found:
+        return found
+    for off in range(0, len(lib) - STAR_COUNT * 16, 4):  # another build: look for the table
+        x, y, z, w = struct.unpack_from("<4f", lib, off)
+        if 0.98 < x * x + y * y + z * z < 1.02 and 1.0 < w < 10.0 and (found := _stars_at(lib, off)):
+            return found
+    return None
 
 
 def derive(root: Path) -> None:

@@ -14,7 +14,7 @@
     "rotation": {"radPerSecond": 0.15, "plusScrollTerm": "-0.002 * currentScroll (rad)", "axis": "z (screen)", "directionNote": "positive = CCW in y-up GL (uncertain sign after decompile)"},
     "stars": {
       "certainty": "certain data, derived transform",
-      "data": "stars.json (2048 x [dx,dy,dz,w]; unit-sphere directions + brightness w in 1.8..8.43) dumped from DAT_1005b15d8",
+      "data": "2048 x [dx,dy,dz,w] (unit-sphere directions + brightness w in 1.8..8.43), DAT_1005b15d8 in the iOS binary; the portal extracts the same table from the APK's libApplication.so at setup (portal/assets.py find_stars)",
       "draw": "GL_POINTS, additive glBlendFunc(ONE,ONE), shader Star.vsh/fsh: v = pow(w*screenScale/4, 2); gl_PointSize = max(v,1) device px; colour = vec4(v) (white, clamps at 1)",
       "transform": "projection = GameView perspective (fov_y = 60deg * min(pinchScale,1), times h/w when h<w; near 1) * Rz(-0.0005*scroll) * R(2pi*a0) * R(2pi*a1) * R(2pi*a2) * scale 64; camera at sphere centre",
       "drift": "3 angles a_i: a_i += dt * speed_i * 0.01; speed_i = (1-dt)*speed_i + dt*goal_i; goal_i = rand[-1,1] rerolled when timer_i (rand[0,1], -= 0.05/s) hits 0",

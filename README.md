@@ -17,13 +17,14 @@ game's own art: its menu background and clocks, portals for worlds, its buttons,
 - Linux host, x86-64 (the 1.7.1 server is x86-64 only; the portal uses host networking, which Docker Desktop on
   macOS / Windows does not handle well).
 - Docker with Compose.
-- Your own copy of The Blockheads for Android (the APK) for the theme. The portal ships no game files; without
-  the APK it works with a plain look.
+- Your own copy of The Blockheads for Android (the APK) for the theme. The portal ships no game files: the
+  images, fonts, sounds and the menu's star field are extracted from your APK at setup. Without the APK it
+  works with a plain look.
 
 ## Running it
 
 ```sh
-git clone <this repo> && cd Blockheads_Server_Manager
+git clone https://github.com/PreDawnHydra/Blockheads_Server_Manager.git && cd Blockheads_Server_Manager
 docker compose up -d --build
 ```
 
