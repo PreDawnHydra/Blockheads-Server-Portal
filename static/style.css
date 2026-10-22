@@ -239,3 +239,8 @@ body.plain .cell .arrow::after { content: "›"; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+/* The top-bar icons are game art; before the APK is uploaded they are plain symbols. */
+body.plain .icon-button img { display: none; }
+body.plain .icon-button { font-size: 20px; line-height: 1; }
+body.plain #settings-button::after { content: "\2699"; }
+body.plain #sound-button::after { content: "\266A"; }
