@@ -244,3 +244,9 @@ body.plain .icon-button img { display: none; }
 body.plain .icon-button { font-size: 20px; line-height: 1; }
 body.plain #settings-button::after { content: "\2699"; }
 body.plain #sound-button::after { content: "\266A"; }
+/* Colour swatch (sun colour): a small framed square, not a stretched text field. */
+input.swatch { flex: none; width: 72px; height: 44px; min-height: 0; padding: 0; cursor: pointer;
+  border: 3px solid #fff; border-radius: 8px; border-image: none; background: none; }
+input.swatch::-webkit-color-swatch-wrapper { padding: 0; }
+input.swatch::-webkit-color-swatch { border: 0; border-radius: 5px; }
+input.swatch::-moz-color-swatch { border: 0; border-radius: 5px; }

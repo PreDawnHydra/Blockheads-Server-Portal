@@ -638,7 +638,7 @@ async function viewCreate() {
   const raw = h("textarea", { class: "mono", spellcheck: "false", style: "min-height:260px" });
   function render() {
     const sunHex = "#" + f.sun.map((v) => v.toString(16).padStart(2, "0")).join("");
-    const sun = h("input", { type: "color", value: sunHex, style: "width:64px;min-height:40px;padding:2px;border-width:4px" });
+    const sun = h("input", { type: "color", class: "swatch", value: sunHex, title: "Sun colour" });
     sun.oninput = () => { const v = sun.value; f.sun = [1, 3, 5].map((i) => parseInt(v.slice(i, i + 2), 16)); };
     raw.value = JSON.stringify(customRules(), null, 2);
     root.replaceChildren(h("div", { class: "grid" },

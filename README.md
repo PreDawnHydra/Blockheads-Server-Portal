@@ -3,6 +3,8 @@
 A self-hosted web portal for running any number of **The Blockheads 1.7.1** dedicated servers, dressed in the
 game's own art: its menu background and clocks, portals for worlds, its buttons, dialogs, font and sounds.
 
+![Home: each world is a portal, as in the game's main menu](docs/screenshots/home.jpg)
+
 - Create, start, stop, restart and delete servers; each runs one world on its own UDP port.
 - Every server option: port, max players, save interval, world size, expert mode, every custom rule (with the
   game's starting-item picker and sun colour), conversion to custom rules.
@@ -11,6 +13,24 @@ game's own art: its menu background and clocks, portals for worlds, its buttons,
 - Worlds: export to .zip, import, clone, rename, delete to a 7-day trash.
 - Backups: scheduled per server, automatic before risky changes, one-click restore.
 - Mods (`.so` files loaded into the server), stats graphs, in-portal notifications.
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Players online, with kick, ban, mod, admin and whitelist](docs/screenshots/players.jpg) | ![Chat with players as SERVER](docs/screenshots/chat.jpg) |
+| **Players**: who is online and who has joined, with the moderation actions | **Chat**: read the server's chat and talk as SERVER |
+| ![Live server console](docs/screenshots/console.jpg) | ![Admin, mod, ban and whitelist lists](docs/screenshots/lists.jpg) |
+| **Console**: the live log, and any server command | **Lists**: admins, mods, bans, and a whitelist switch |
+| ![Create World with every custom rule, starting items and sun colour](docs/screenshots/create-world.jpg) | ![Starting-item picker with the game's categories and icons](docs/screenshots/item-picker.jpg) |
+| **Create World**: every custom rule, starting items, sun colour, raw JSON | **Starting items**: the game's own picker and item icons |
+
+On a phone:
+
+<p>
+  <img src="docs/screenshots/phone-home.jpg" alt="Home on a phone" width="280">
+  <img src="docs/screenshots/phone-players.jpg" alt="Players on a phone" width="280">
+</p>
 
 ## Requirements
 
