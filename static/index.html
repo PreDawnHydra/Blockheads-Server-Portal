@@ -1,1 +1,23 @@
-<!doctype html><title>Blockheads Server Portal</title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Blockheads Server Portal</title>
+  <link rel="icon" href="/game/icon.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="plain">
+  <canvas id="bg"></canvas>
+  <header class="topbar" id="topbar" hidden>
+    <button class="icon-button" id="settings-button" title="Settings"><img src="/game/GameResources/settingsCog.png" alt=""></button>
+    <a class="title label" href="#/" style="color:inherit;text-decoration:none">Blockheads Server Portal</a>
+    <button class="icon-button" id="sound-button" title="Sounds"><img id="sound-icon" src="/game/GameResources/speakerOn.png" alt="" style="image-rendering:pixelated"></button>
+  </header>
+  <main id="app"></main>
+  <div class="toasts" id="toasts"></div>
+  <script src="/bg.js"></script>
+  <script src="/ui.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

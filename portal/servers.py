@@ -22,9 +22,12 @@ from . import config, db, worlds
 from .hub import hub
 
 PREFIX = re.compile(r"^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d\.\d{3}) blockheads_server171\[\d+:\w+\] ?(.*)$")
-CONNECTED = re.compile(r"^WORLD - Player Connected (.+?) \| (.+?) \| (\S+)\s*$")
-DISCONNECTED = re.compile(r"^WORLD - Player Disconnected (.+?)\s*$")
-PLAYERS_REPLY = re.compile(r"^There are (\d+) players? connected")
+# "<world name> - Player Connected ALIAS | IP | PLAYERID"; leaving is "<world name> - Client disconnected:PLAYERID"
+# (seen from a real client), or "<world name> - Player Disconnected ALIAS".
+CONNECTED = re.compile(r"^.* - Player Connected (.+?) \| (.+?) \| (\S+)\s*$")
+DISCONNECTED = re.compile(r"^.* - Player Disconnected (.+?)\s*$")
+CLIENT_DISCONNECTED = re.compile(r"^.* - Client disconnected:(\S+)\s*$")
+PLAYERS_REPLY = re.compile(r"^(?:SERVER: )?There are (\d+) players? connected")
 PLAYER_ROW = re.compile(r"^(.+?) \| (.+?) \| (\S+)\s*$")
 CHAT = re.compile(r"^(.{1,40}?): (.*)$")
 LOADED = "World load complete."
@@ -67,13 +70,14 @@ class Server:
         self.status = "stopped"  # stopped | starting | running | stopping | crashed
         self.players: dict[str, dict] = {}
         self.history: collections.deque[str] = collections.deque(maxlen=config.CONSOLE_HISTORY)
+        self.chat: collections.deque[dict] = collections.deque(maxlen=200)
         self.crashes: list[float] = []
         self.started_at: float | None = None
         self.last_error: str | None = None
         self._stopping = False
         self._pending_players: dict[str, dict] | None = None
         self._pending_count = 0
-        self._last_message = ""
+        self._last_command_at = 0.0
         self._loaded = asyncio.Event()
         self.log_dir = config.LOGS / world_id
         self.log_dir.mkdir(parents=True, exist_ok=True)
@@ -98,8 +102,9 @@ class Server:
     # ---- launching -------------------------------------------------------------------------------------------
 
     def _arguments(self, cfg: dict) -> list[str]:
+        # --no-exit (undocumented): without it the server quits when the last player leaves.
         common = ["--port", str(cfg["port"]), "--max_players", str(cfg["maxPlayers"]),
-                  "--save_delay", str(cfg["saveDelay"])]
+                  "--save_delay", str(cfg["saveDelay"]), "--no-exit"]
         create = cfg.get("create")
         if create:  # first launch: the world does not exist yet
             args = ["--new", create["name"], "--world_id", self.id, "--world_width", create["size"]] + common
@@ -177,6 +182,8 @@ class Server:
         if not line:
             return
         self._log_line(f"[console] {line}")
+        if line.startswith("/"):
+            self._last_command_at = time.time()
         proc.stdin.write(line.encode() + b"\n")
         await proc.stdin.drain()
 
@@ -229,12 +236,16 @@ class Server:
             if server_config(self.id)["notify"]["join"]:
                 hub.notify(self.id, "join", f"{alias} joined {self._name()}.")
             return
+        alias = None
         if m := DISCONNECTED.match(msg):
             alias = m.group(1)
-            self.players.pop(alias, None)
-            self._players_changed()
-            if server_config(self.id)["notify"]["leave"]:
-                hub.notify(self.id, "leave", f"{alias} left {self._name()}.")
+        elif m := CLIENT_DISCONNECTED.match(msg):
+            alias = next((p["name"] for p in self.players.values() if p["id"] == m.group(1)), None)
+        if alias is not None:
+            if self.players.pop(alias, None) is not None:
+                self._players_changed()
+                if server_config(self.id)["notify"]["leave"]:
+                    hub.notify(self.id, "leave", f"{alias} left {self._name()}.")
             return
         if m := PLAYERS_REPLY.match(msg):
             self._pending_count = int(m.group(1))
@@ -244,8 +255,13 @@ class Server:
             return
         if m := CHAT.match(msg):
             alias, text = m.groups()
+            # The replies to console commands are SERVER messages too; those right after a command are not chat.
+            if alias == "SERVER" and time.time() - self._last_command_at < 2:
+                return
             if alias == "SERVER" or alias in self.players:
-                hub.publish({"type": "chat", "server": self.id, "name": alias, "text": text, "t": time.time()})
+                message = {"name": alias, "text": text, "t": time.time()}
+                self.chat.append(message)
+                hub.publish({"type": "chat", "server": self.id, **message})
 
     def _finish_players_reply(self) -> None:
         found, self._pending_players = self._pending_players or {}, None

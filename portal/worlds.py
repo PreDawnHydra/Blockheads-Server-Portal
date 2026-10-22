@@ -138,13 +138,39 @@ def info(world_id: str) -> dict:
         "saved": _date(r.get("saveDate")),
         "worldTime": world_time,
         "day": int(world_time // DAY_LENGTH) + 1,
-        "port": r.get("hostPort"),
-        "maxPlayers": r.get("maxPlayers"),
+        "port": int(r["hostPort"]) if str(r.get("hostPort", "")).isdigit() else None,
+        "maxPlayers": int(r["maxPlayers"]) if str(r.get("maxPlayers", "")).isdigit() else None,
+        "portalLevel": int(r.get("portalLevel", 0) or 0),
         "passwordSet": bool(r.get("serverPassword")),
         "pvp": not r.get("pvpDisabled", False),
         "welcomeMessage": r.get("welcomeMessage", ""),
         "diskBytes": sum(f.stat().st_size for f in p.rglob("*") if f.is_file()),
+        "playersSeen": players_seen(world_id),
     }
+
+
+def players_seen(world_id: str, limit: int = 100) -> list[dict]:
+    """Players who have joined, newest first: server_db main/<playerID>_info (alias, ip, lastSeen, playerID)."""
+    db_dir = path(world_id) / "server_db"
+    if not (db_dir / "data.mdb").exists():
+        return []
+    env = _open(db_dir, readonly=True)
+    out = []
+    try:
+        with env.begin(db=env.open_db(b"main", create=False)) as t:
+            for key, raw in t.cursor():
+                if not key.endswith(b"_info"):
+                    continue
+                try:
+                    d = _load_plist(raw)[0]
+                except Exception:
+                    continue
+                out.append({"name": d.get("alias", "?"), "ip": d.get("ip"), "id": d.get("playerID"),
+                            "lastSeen": _date(d.get("lastSeen"))})
+    finally:
+        env.close()
+    out.sort(key=lambda p: p["lastSeen"] or "", reverse=True)
+    return out[:limit]
 
 
 def summary(world_id: str) -> dict:
@@ -160,9 +186,14 @@ def summary(world_id: str) -> dict:
         except Exception:
             s = {}
     width = s.get("worldWidthMacro")
+    try:  # the portal level picks the world's portal art (1-5, else the plain one); only the record has it
+        level = int(read_record(world_id).get("portalLevel", 0) or 0)
+    except Exception:
+        level = 0
     return {
         "id": world_id,
         "name": s.get("worldName", world_id),
+        "portalLevel": level,
         "size": next((k for k, v in SIZES.items() if v == width), str(width) if width else "?"),
         "expert": bool(s.get("expertMode", False)),
         "custom": bool(s.get("customRulesDict")),

@@ -130,10 +130,16 @@ async def upload_assets(file: UploadFile = File(...), _=User):
         while chunk := await file.read(1 << 20):
             f.write(chunk)
     try:
-        result = await asyncio.to_thread(assets.extract, tmp)
+        result = await asyncio.to_thread(assets.extract, tmp, Path(file.filename or "game.apk").name)
     finally:
         tmp.unlink(missing_ok=True)
     return result
+
+
+@app.get("/theme/stars.json")
+def stars():
+    # The menu background's star table (public: the login page draws it too).
+    return FileResponse(Path(__file__).resolve().parent / "data" / "stars.json", media_type="application/json")
 
 
 @app.get("/api/rules")
@@ -310,6 +316,11 @@ def console_history(world_id: str, _=User):
     return {"lines": list(manager.get(world_id).history)}
 
 
+@app.get("/api/servers/{world_id}/chat")
+def chat_history(world_id: str, _=User):
+    return list(manager.get(world_id).chat)
+
+
 @app.post("/api/servers/{world_id}/diagnostics")
 async def diagnostics(world_id: str, _=User):
     s = manager.get(world_id)
@@ -327,11 +338,27 @@ PLAYER_COMMANDS = {"kick": "/kick", "ban": "/ban", "ban-no-device": "/ban-no-dev
                    "whitelist": "/whitelist", "unwhitelist": "/unwhitelist"}
 
 
+# While stopped, the list actions edit the list files instead: (list, add?).
+OFFLINE_ACTIONS = {"ban": ("blacklist", True), "ban-no-device": ("blacklist", True), "unban": ("blacklist", False),
+                   "mod": ("modlist", True), "unmod": ("modlist", False), "admin": ("adminlist", True),
+                   "unadmin": ("adminlist", False), "whitelist": ("whitelist", True),
+                   "unwhitelist": ("whitelist", False)}
+
+
 @app.post("/api/servers/{world_id}/players/{name}/{action}")
 async def player_action(world_id: str, name: str, action: str, _=User):
     if action not in PLAYER_COMMANDS or not re.fullmatch(r"[^\s/]{1,64}", name):
         raise HTTPException(400, "Unknown action.")
-    await manager.get(world_id).command(f"{PLAYER_COMMANDS[action]} {name}")
+    if manager.is_running(world_id):
+        await manager.get(world_id).command(f"{PLAYER_COMMANDS[action]} {name}")
+    elif action in OFFLINE_ACTIONS:
+        _require_world(world_id)
+        list_name, add = OFFLINE_ACTIONS[action]
+        entries = worlds.read_list(world_id, list_name)
+        entries = entries + [name] if add else [e for e in entries if e.lower() != name.lower()]
+        worlds.write_list(world_id, list_name, entries)
+    else:
+        raise HTTPException(409, "The server is not running.")
     return {"ok": True}
 
 

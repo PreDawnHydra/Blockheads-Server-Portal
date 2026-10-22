@@ -45,7 +45,7 @@ def _wanted(name: str) -> str | None:
     return None
 
 
-def extract(apk: Path) -> dict:
+def extract(apk: Path, source_name: str | None = None) -> dict:
     try:
         z = zipfile.ZipFile(apk)
     except zipfile.BadZipFile:
@@ -67,8 +67,12 @@ def extract(apk: Path) -> dict:
         with z.open(name) as src, open(out, "wb") as dst:
             shutil.copyfileobj(src, dst)
         count += 1
+    # The game's launcher icon (one 512 px image) as the portal's favicon.
+    if "res/drawable-xxhdpi-v4/icon.png" in names:
+        with z.open("res/drawable-xxhdpi-v4/icon.png") as src, open(staging / "icon.png", "wb") as dst:
+            shutil.copyfileobj(src, dst)
     derive(staging)
-    (staging / "extracted.json").write_text(json.dumps({"version": VERSION, "source": apk.name, "files": count}))
+    (staging / "extracted.json").write_text(json.dumps({"version": VERSION, "source": source_name or apk.name, "files": count}))
     old = config.ASSETS.with_name("assets.old")
     shutil.rmtree(old, ignore_errors=True)
     if config.ASSETS.exists():

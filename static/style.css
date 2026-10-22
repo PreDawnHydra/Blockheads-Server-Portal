@@ -1,0 +1,241 @@
+/* Blockheads Server Portal — themed with The Blockheads' own art (extracted to /game/ from the user's APK).
+   Sizes and slices follow the game's code: buttons are the 80 px InventoryButtonBackground images drawn as
+   3-slice (each half a cap h/2 wide, the middle column stretched), alerts are alert-window.png (top 38 px and
+   bottom 12 px fixed), labels are the Blockheads font at 16 pt in white. Without the assets (body.plain) the
+   same layout falls back to flat colours. */
+
+@font-face {
+  font-family: "Blockheads";
+  src: url("/game/BlockheadsFont-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+:root {
+  --g: /game/GameResources;
+  --dim: rgba(16, 33, 90, 0.67);           /* BlockBackground (0.064, 0.129, 0.351) at 0.67 */
+  --options-dim: rgba(11, 22, 60, 0.67);   /* MainMenuOptionsUI (0.043, 0.086, 0.235) at 0.67 */
+  --value: #ababab;                         /* table values: 0.67 grey */
+  --text: #fff;
+  --panel: #0e1f5a;
+  --blue: #1f4fa8;
+  --green: #2d8a2d;
+  --red: #b02a2a;
+  --gap: 10px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: #0a1640;
+  color: var(--text);
+  font: 16px/1.2 "Blockheads", "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+/* The game's labels carry a black outline and a drop shadow (baked into its bitmap font). */
+.label, h1, h2, h3, button, .tab, .portal-name, .stat, th {
+  text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000, 2px 2px 0 #000;
+}
+input, textarea, select, .console, .mono { text-transform: none; }
+
+#bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; display: block; }
+
+/* ---- Top bar --------------------------------------------------------------------------------------------- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 8px;
+  padding: max(8px, env(safe-area-inset-top)) 12px 8px;
+  background: linear-gradient(rgba(8, 16, 52, 0.85), rgba(8, 16, 52, 0));
+}
+.topbar .title { flex: 1; text-align: center; font-size: 20px; }
+.icon-button { width: 40px; height: 40px; padding: 4px; flex: none; }
+.icon-button img { width: 32px; height: 32px; display: block; image-rendering: auto; pointer-events: none; }
+
+/* ---- Buttons: InventoryButtonBackground 3-slice ---------------------------------------------------------- */
+button, .button {
+  --img: url("/game/GameResources/InventoryButtonBackground.png");
+  --img-down: url("/game/GameResources/InventoryButtonBackgroundSelected.png");
+  appearance: none; cursor: pointer; color: #fff; font: inherit; text-transform: inherit;
+  min-height: 40px; padding: 0 14px;
+  border-style: solid; border-width: 0 20px;
+  border-image: var(--img) 0 39 fill / 0 20px stretch;
+  background: none;
+  transition: transform 0.25s;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+button.green { --img: url("/game/GameResources/InventoryButtonBackgroundGreen.png");
+  --img-down: url("/game/GameResources/InventoryButtonBackgroundSelectedGreen.png"); }
+button.red { --img: url("/game/GameResources/InventoryButtonBackgroundRed.png");
+  --img-down: url("/game/GameResources/InventoryButtonBackgroundSelectedRed.png"); }
+button:active:not(:disabled), button.down { border-image-source: var(--img-down); transform: scale(0.875); transition: none; }
+button:disabled { filter: brightness(0.67); color: #808080; cursor: default; }
+button.icon-button { border-width: 0; border-image: var(--img) 0 fill / 0 stretch; }
+button.wide { min-width: 226px; }
+.buttons { display: flex; flex-wrap: wrap; gap: var(--gap); justify-content: center; }
+
+/* ---- Panels: alert-window (top 38 px, bottom 12 px fixed) and pauseBackground ---------------------------- */
+/* Page panels: pauseBackground.png (528x640 @2x) — its title strip (top 60 px) and border kept, the rest stretched. */
+.panel {
+  border-style: solid; border-width: 30px 6px 6px;
+  border-image: url("/game/GameResources/pauseBackground.png") 60 12 12 fill / 30px 6px 6px stretch;
+  padding: 0 12px 12px;
+}
+.panel > h2:first-child, .panel > .panel-title { margin: -24px 0 16px; text-align: center; font-size: 16px; min-height: 18px; }
+/* Dialogs: alert-window@2x.png (560x102): top 38 pt and bottom 12 pt fixed, as BlockAlertView's stretchable image. */
+.alert {
+  border-style: solid; border-width: 38px 4px 12px;
+  border-image: url("/game/alert-window@2x.png") 76 8 24 fill / 38px 4px 12px stretch;
+  padding: 0 10px 0;
+}
+.alert > h2:first-child { margin: -29px 0 18px; font-size: 16px; min-height: 18px; }
+.options-panel {
+  background: url("/game/GameResources/pauseBackground.png") center / 100% 100% no-repeat;
+  padding: 28px 22px;
+}
+.dim { position: fixed; inset: 0; background: var(--dim); z-index: 50; display: grid; place-items: center;
+  animation: fade 0.3s; padding: 16px; }
+@keyframes fade { from { opacity: 0; } }
+/* BlockAlertView: 0.3 s bounce, scale = (t(1-(s+1)) + (s+1))·0.2 + 0.8 with s = sin(-2πt), t = (i/20)^0.3 */
+@keyframes alert-in {
+  0% { transform: scale(1); } 10% { transform: scale(0.83); } 25% { transform: scale(0.81); }
+  45% { transform: scale(0.93); } 70% { transform: scale(1.03); } 100% { transform: scale(1); }
+}
+.alert { width: min(280px, 100%); animation: alert-in 0.3s; font-size: 16px; text-align: center; }
+.alert.wide { width: min(560px, 100%); }
+.alert p { margin: 0 0 10px; text-transform: none; white-space: pre-wrap; }
+.alert .buttons button { flex: 1 1 calc(50% - 5px); min-width: 0; }
+
+/* ---- Text entry: textEntry.png outline (game) / textEntryBackground (dialogs) ---------------------------- */
+input[type=text], input[type=password], input[type=number], textarea, select {
+  width: 100%; color: #fff; font: inherit; font-size: 16px; text-align: center;
+  background: rgba(0, 0, 0, 0.25); min-height: 48px; padding: 8px 12px;
+  border-style: solid; border-width: 12px;
+  /* textEntry.png (80x80 white rounded outline); 9-sliced so wide fields keep its corners */
+  border-image: url("/game/GameResources/textEntry.png") 24 / 12px stretch;
+  outline: none;
+}
+textarea { text-align: left; min-height: 120px; resize: vertical; }
+input:focus, textarea:focus { filter: brightness(1.25); }
+label.field { display: block; margin: 10px 0; }
+label.field > span { display: block; margin-bottom: 4px; }
+
+/* ---- Table cells: tableCellBackgroundBlue / Green, rows 42 tall every 40 ----------------------------------- */
+.table { display: flex; flex-direction: column; }
+.cell {
+  display: flex; align-items: center; gap: 8px; min-height: 42px; margin-bottom: -2px;
+  padding: 0 9px; width: 100%; text-align: left;
+  border-style: solid; border-width: 0 21px;
+  border-image: url("/game/GameResources/tableCellBackgroundBlue.png") 0 19 fill / 0 21px stretch;
+  margin-inline: 0;
+}
+.cell { transform: none !important; }
+.cell.selected, button.cell:active:not(:disabled) { border-image-source: url("/game/GameResources/tableCellBackgroundGreen.png"); }
+.cell .name { flex: 1; }
+.cell .value { color: var(--value); text-align: right; }
+.cell .arrow { width: 16px; height: 16px; background: url("/game/GameResources/arrowRightTxt.png") center / contain no-repeat; }
+
+/* ---- Toggle: toggleButtonOn / Off, ON in the left half, OFF in the right ------------------------------------ */
+.toggle { width: 96px; min-height: 40px; border: 0; padding: 0; position: relative;
+  background: url("/game/GameResources/toggleButtonOff.png") center / 100% 100% no-repeat; border-image: none; }
+.toggle.on { background-image: url("/game/GameResources/toggleButtonOn.png"); }
+/* MJToggleButton -updateTexturesAndText: one title — OFF in the right half while off (knob left), ON in the left half
+   while on (knob right). */
+.toggle::after { content: "OFF"; position: absolute; right: 0; width: 50%; top: 50%; transform: translateY(-50%); }
+.toggle.on::after { content: "ON"; left: 0; right: auto; }
+.toggle:active { transform: none; }
+body.plain .toggle { width: 72px; }
+
+/* ---- Home: the main menu's portals ------------------------------------------------------------------------- */
+.home { min-height: calc(100dvh - 60px); display: flex; flex-direction: column; align-items: center; }
+.portals {
+  width: 100%; display: flex; gap: 0; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 24px calc(50% - 100px) 8px; scrollbar-width: none;
+}
+.portals::-webkit-scrollbar { display: none; }
+.portal-slot { flex: 0 0 200px; scroll-snap-align: center; display: flex; flex-direction: column; align-items: center;
+  cursor: pointer; background: none; border: 0; color: #fff; padding: 0; min-height: 0; font: inherit;
+  border-image: none; }
+.portal-slot:active { transform: none; }
+/* TileMap.png: 16x32 frames, drawn 40x80 (x1.5 near the centre) */
+.portal {
+  width: 40px; height: 80px; image-rendering: pixelated;
+  background-image: url("/game/GameResources/TileMap.png"); background-size: 1280px 1280px;
+  transition: transform 0.2s; transform-origin: 50% 100%;
+}
+.portal-slot.current .portal { transform: scale(1.5); }
+.portal-name { margin-top: 10px; font-size: 16px; transition: transform 0.2s; white-space: nowrap; }
+.portal-slot.current .portal-name { transform: scale(1.4); }
+.status-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px;
+  background: #777; box-shadow: 0 0 0 2px #000; }
+.status-dot.running { background: #4cd84c; } .status-dot.starting, .status-dot.stopping { background: #e6c84a; }
+.status-dot.crashed { background: #e04646; }
+.selected-world { text-align: center; margin: 18px 0 14px; min-height: 64px; }
+.selected-world h1 { font-size: 30px; margin: 0 0 8px; }
+.selected-world .sub { color: #ddd; font-size: 14px; }
+
+/* ---- Server page ---------------------------------------------------------------------------------------------- */
+.page { max-width: 1100px; margin: 0 auto; padding: 8px 12px 40px; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin: 10px 0 14px; }
+.tabs button { min-height: 36px; padding: 0 6px; font-size: 14px; }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.console {
+  height: min(60vh, 520px); overflow-y: auto; font: 13px/1.35 ui-monospace, Menlo, Consolas, monospace;
+  background: rgba(0, 0, 0, 0.45); padding: 8px; white-space: pre-wrap; word-break: break-word; text-shadow: none;
+}
+.console .portal-line { color: #9fc4ff; } .console .cmd { color: #ffe27a; } .console .err { color: #ff8b8b; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row > input { flex: 1; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; }
+.kv > :nth-child(odd) { color: var(--value); }
+.player { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+.player .who { flex: 1 1 160px; }
+.player .who small { display: block; color: var(--value); font-size: 12px; text-transform: none; }
+.player button { min-height: 32px; font-size: 12px; padding: 0 4px; }
+.chat-line { padding: 3px 0; text-transform: none; }
+.chat-line b { text-transform: uppercase; }
+.muted { color: var(--value); }
+.small { font-size: 13px; }
+.hint { color: var(--value); font-size: 13px; text-transform: none; margin: 6px 0; }
+.list-editor textarea { min-height: 140px; }
+.spacer { flex: 1; }
+canvas.chart { width: 100%; height: 160px; background: rgba(0,0,0,.3); }
+
+/* ---- Item slots: inventory buttons with the item's icon ------------------------------------------------------ */
+.slots { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.slot { width: 56px; height: 56px; min-height: 56px; padding: 4px; position: relative; border-width: 0;
+  border-image: url("/game/GameResources/InventoryButtonBackground.png") 0 fill / 0 stretch; }
+.slot img { width: 40px; height: 40px; image-rendering: pixelated; display: block; margin: auto; }
+.slot .count { position: absolute; right: 4px; bottom: 2px; font-size: 13px; }
+.slot .tag { font-size: 10px; }
+.item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); gap: 4px; max-height: 50vh; overflow-y: auto; }
+
+/* ---- Toasts --------------------------------------------------------------------------------------------------- */
+.toasts { position: fixed; right: 12px; bottom: 12px; z-index: 60; display: flex; flex-direction: column; gap: 8px; max-width: min(360px, calc(100% - 24px)); }
+.toast { animation: alert-in 0.3s; font-size: 14px; text-transform: none; }
+
+/* ---- Without the game's assets ---------------------------------------------------------------------------------- */
+body.plain button, body.plain .cell, body.plain .slot { border-image: none; border: 2px solid #000; border-radius: 6px; background: var(--blue); }
+body.plain button.green { background: var(--green); } body.plain button.red { background: var(--red); }
+body.plain .cell.selected { background: var(--green); }
+body.plain .panel { border-image: none; border: 2px solid #8fb0ff; border-radius: 8px; background: var(--panel); padding: 14px; }
+body.plain .panel > h2:first-child, body.plain .alert > h2:first-child { margin-top: 0; }
+body.plain .alert { border-image: none; border: 2px solid #8fb0ff; border-radius: 8px; background: var(--panel); padding: 14px; }
+body.plain input, body.plain textarea, body.plain select { border-image: none; border: 2px solid #8fb0ff; border-radius: 6px; }
+body.plain .toggle { background: #444; border-radius: 6px; } body.plain .toggle.on { background: var(--green); }
+body.plain .portal { background: radial-gradient(ellipse at 50% 45%, #bfe6ff 0 18%, #3a7ae0 40%, transparent 70%); }
+body.plain .options-panel { background: var(--panel); border: 2px solid #8fb0ff; border-radius: 8px; }
+body.plain .cell .arrow::after { content: "›"; }
+
+@media (max-width: 600px) {
+  .topbar .title { font-size: 15px; }
+  button.wide { min-width: 0; flex: 1; }
+  .portals { padding-inline: calc(50% - 80px); }
+  .portal-slot { flex-basis: 160px; }
+  .selected-world h1 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
