@@ -5,9 +5,11 @@ The Blockheads 1.7.1 dedicated servers, themed with the game's own art.
 
 ## Deployment
 
-- One container, built `FROM theblockheads/server` pinned by digest (`sha256:cdd0d5fc…`), x86-64 only. The server
-  binary comes from that image (Majic Jungle published the 1.7.1 Linux server for free); if the image disappears,
-  rebuild it from the archived 1.7.1 server the same way the image does.
+- One container on Ubuntu 22.04 (pinned by digest), x86-64 only. The Dockerfile sets up Majic Jungle's free
+  1.7.1 Linux server itself from archive.org (`BHSv171`, checksum-verified), patched onto 22.04's libraries as
+  the community `theblockheads/server` image does, and verifies the result is the exact tested binary — so the
+  build does not depend on that image. (Changed 2026-10-22 at the owner's request; the spec first used the
+  image as the base.)
 - `network_mode: host`. The web UI listens on `PORTAL_PORT` (default 8080). Game servers claim UDP ports at runtime
   (next free from 15151, or one typed in); the portal checks a port is free before using it.
 - Volumes: `/data` (worlds, trash, mods, assets, settings, stats, logs); optional `/backups` (used if mounted).

@@ -77,8 +77,10 @@ The portal speaks plain HTTP. To reach it from outside your network, put it behi
 - **Server quirks the portal handles**: the server ignores stop signals (so the portal always stops it with
   `/stop`), quits when the last player leaves unless started with `--no-exit` (always passed), and its real
   defaults differ from its help text (so every option is passed explicitly).
-- The server binary comes from the `theblockheads/server` image, pinned by digest in the `Dockerfile`; that
-  image patches Majic Jungle's free 1.7.1 Linux server (archive.org) onto Ubuntu 22.04.
+- The game server is Majic Jungle's free 1.7.1 Linux server. The `Dockerfile` downloads it from its archive.org
+  copy (`BHSv171`), checks its checksum, points it at Ubuntu 22.04's libraries (it is a GNUstep program; 22.04
+  packages the GNUstep base 1.28 it runs on) and checks the result is the exact binary the portal is tested
+  with. The build needs only Ubuntu and archive.org.
 
 ## Development
 
