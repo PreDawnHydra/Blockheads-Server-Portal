@@ -336,8 +336,11 @@ class Server:
         if not pid:
             return 0.0, 0
         try:
-            p = psutil.Process(pid)
-            return p.cpu_percent(interval=None), p.memory_info().rss
+            # cpu_percent measures since the previous call on the same Process object, so keep one per process.
+            if getattr(self, "_ps", None) is None or self._ps.pid != pid:
+                self._ps = psutil.Process(pid)
+                self._ps.cpu_percent(interval=None)
+            return self._ps.cpu_percent(interval=None), self._ps.memory_info().rss
         except psutil.Error:
             return 0.0, 0
 

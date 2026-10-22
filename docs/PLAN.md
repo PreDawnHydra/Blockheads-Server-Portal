@@ -1,26 +1,36 @@
 # Plan
 
-Progress on [SPEC.md](SPEC.md). `[x]` done and verified, `[~]` in progress, `[ ]` to do.
+Progress on [SPEC.md](SPEC.md). `[x]` done and verified, `[ ]` to do.
 
 ## Milestone 1 — backend core
-- [ ] Container: Dockerfile FROM the pinned server image, Python deps, compose file with host networking
-- [ ] Settings, first-run password, login sessions, rate limiting
-- [ ] World store: list, read world info (worldv2 / world_db), create, rename, clone, delete to trash, export, import
-- [ ] Server process manager: start / stop (`/stop`) / restart, console stdin, log capture and rotation,
-      crash restart with crash-loop limit, autostart, shutdown of all servers
-- [ ] Log parsing: players online, chat, events
-- [ ] Lists (admin / mod / ban / whitelist): commands while running, files while stopped
-- [ ] World database edits while stopped (welcome message, max players, password, PvP) with backup first
-- [ ] Backups: scheduled, before risky actions, retention, restore
-- [ ] Mods upload and per-server enable
-- [ ] Stats sampling and history
-- [ ] WebSocket: console, players, chat, notifications
+- [x] Container: Dockerfile FROM the pinned server image, Python deps (pinned for Ubuntu 22.04's Python 3.10),
+      compose file with host networking and a 60 s stop grace period
+- [x] Settings, first-run password or `PORTAL_PASSWORD`, sessions (30 days / browser), login rate limiting
+- [x] World store: list, info (world_db record + summary file), create, rename, clone, delete to trash, export,
+      import (id kept unless taken), players seen (server_db `<playerID>_info`)
+- [x] Server processes: start / stop (`/stop`) / restart, console, logs with rotation, crash restart with the
+      3-in-10-minutes limit, autostart, stop-all on shutdown, `--no-exit`
+- [x] Log parsing from real client sessions: joins, leaves (by player id), `/players` replies, chat
+- [x] Lists: commands while running, files while stopped; reload from disk
+- [x] World database edits while stopped (name, welcome message, password, PvP) with a backup first
+- [x] Backups: scheduled, before risky actions, retention, restore
+- [x] Mods: upload, per-server enable via LD_PRELOAD (verified a test mod's constructor runs in the server)
+- [x] Stats sampling and history; WebSocket events; in-portal notifications
 
 ## Milestone 2 — theme
-- [ ] Asset extraction from the uploaded APK
-- [ ] Game-faithful UI (fonts, panels, buttons, background, portal icons, sounds) + fallback skin
-- [ ] Create World form with rule pickers, sun colour, starting items with icons, raw JSON tab
+- [x] Asset extraction from the uploaded APK (images, fonts, sounds, launcher icon, item icons)
+- [x] Game-faithful UI from the client's code: menu background, stars, clocks, portals (art by portal level,
+      the menu's order), buttons, dialogs, panels, table cells, toggles, font, sounds; plain fallback
+- [x] Create World: every rule, sun colour, starting items with icons (the game's picker), raw JSON tab
 
 ## Milestone 3 — verification
-- [ ] End-to-end in Docker: create, start, join from the port (desktop and phone), chat, kick, stop, export/import
-- [ ] README
+- [x] Docker end to end: create, console, chat, players, stop, list and world edits, clone, export/import,
+      backups and restore, trash, three servers at once, crash restart, docker stop saving every world
+- [x] Joined from the port's desktop client: player list, chat both ways, kick, `/players`, leave
+- [x] Browser walkthrough (desktop and phone sizes) with no page errors
+- [x] README
+- [ ] Owner: try it on their server, and with an original-version client if one is handy
+
+## Open questions
+- The sun colour picker: the game has `colorPicker.png`; the portal uses the browser's colour input.
+- Workbench cube icons use the side face at level 0; flax mats and rock fall back to a generic cell.
