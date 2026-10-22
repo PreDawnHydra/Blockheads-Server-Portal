@@ -26,5 +26,7 @@ async def backup_loop() -> None:
             if time.time() - last >= cfg["intervalHours"] * 3600:
                 await asyncio.to_thread(backups.safe_create, world_id, "scheduled")
                 await asyncio.to_thread(backups.prune, world_id, cfg["keep"])
-        worlds.empty_trash(older_than=time.time() - config.TRASH_DAYS * 86400)
+        for world_id in worlds.empty_trash(older_than=time.time() - config.TRASH_DAYS * 86400):
+            if not worlds.exists(world_id):
+                db.delete_server_config(world_id)  # its settings were kept only for a restore
         await asyncio.sleep(300)

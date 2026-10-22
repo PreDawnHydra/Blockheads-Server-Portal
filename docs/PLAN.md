@@ -31,6 +31,17 @@ Progress on [SPEC.md](SPEC.md). `[x]` done and verified, `[ ]` to do.
 - [x] README
 - [ ] Owner: try it on their server, and with an original-version client if one is handy
 
+## Feedback round 1 (2026-10-22)
+- [x] Settings page had no way back: Back button
+- [x] Whitelist on/off: the server treats an empty whitelist as off (BHServer -playerIsWhiteListedWithInfo:);
+      the toggle keeps the names aside while off and restores them
+- [x] Stop took 30 s and pages needed reloads: with --no-exit, /stop saves ("Exiting World.") but leaves the
+      process idle; the portal now ends it once that line appears (save finished: -[GameController stop]), and
+      server pages redraw their tab when the server's state changes; World tab shows a stop notice with a button
+- [x] A deleted server lingered as an id-named portal: only existing (or being-created) worlds are servers;
+      "Delete server" (World and Settings tabs) explains it deletes the world; settings purge with the trash;
+      an address of a gone server goes home
+
 ## Open questions
 - The sun colour picker: the game has `colorPicker.png`; the portal uses the browser's colour input.
 - Workbench cube icons use the side face at level 0; flax mats and rock fall back to a generic cell.

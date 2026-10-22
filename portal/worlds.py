@@ -364,7 +364,11 @@ def restore_from_trash(key: str) -> str:
     return world_id
 
 
-def empty_trash(older_than: float | None = None) -> None:
+def empty_trash(older_than: float | None = None) -> list[str]:
+    """Delete trashed worlds (older than a time, or all); the ids of those removed."""
+    removed = []
     for item in trash_items():
         if older_than is None or item["deleted"] < older_than:
             shutil.rmtree(config.TRASH / item["key"], ignore_errors=True)
+            removed.append(item["id"])
+    return removed

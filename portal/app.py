@@ -232,6 +232,7 @@ def get_server(world_id: str, _=User):
     if worlds.exists(world_id):
         out["world"] = worlds.info(world_id)
         out["lists"] = {n: worlds.read_list(world_id, n) for n in worlds.LISTS}
+        out["whitelistStash"] = (db.server_config(world_id) or {}).get("whitelistStash", [])
     return out
 
 
@@ -392,6 +393,43 @@ async def set_list(world_id: str, name: str, body: ListIn, _=User):
     else:
         worlds.write_list(world_id, name, entries)
     return {"entries": worlds.read_list(world_id, name)}
+
+
+class WhitelistIn(BaseModel):
+    enabled: bool
+
+
+@app.post("/api/servers/{world_id}/whitelist")
+async def set_whitelist(world_id: str, body: WhitelistIn, _=User):
+    """The server has no whitelist switch: an empty whitelist lets everyone in, any entry restricts joining to the
+    listed names / IPs and mods (BHServer -playerIsWhiteListedWithInfo:). Off keeps the names aside and empties
+    the list; on puts them back."""
+    _require_world(world_id)
+    cfg = db.server_config(world_id) or dict(DEFAULTS)
+    current = worlds.read_list(world_id, "whitelist")
+    running = manager.is_running(world_id)
+    s = manager.get(world_id)
+    if body.enabled:
+        entries = cfg.get("whitelistStash") or []
+        if not entries and not current:
+            raise HTTPException(400, "Add at least one name or IP address to the whitelist to turn it on.")
+        if running:
+            for e in entries:
+                await s.command(f"/whitelist {e}")
+            await asyncio.sleep(0.5)
+        else:
+            worlds.write_list(world_id, "whitelist", current + entries)
+        cfg.pop("whitelistStash", None)
+    else:
+        if current:
+            cfg["whitelistStash"] = current
+        if running:
+            await s.command("/clear-whitelist")
+            await asyncio.sleep(0.5)
+        else:
+            worlds.write_list(world_id, "whitelist", [])
+    db.save_server_config(world_id, cfg)
+    return {"entries": worlds.read_list(world_id, "whitelist"), "stash": cfg.get("whitelistStash", [])}
 
 
 @app.post("/api/servers/{world_id}/lists/reload")

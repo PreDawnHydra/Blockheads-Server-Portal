@@ -30,7 +30,7 @@ function notify(e) {
 async function refreshServers() { state.servers = await api("GET", "/api/servers"); return state.servers; }
 
 // ---- Router ------------------------------------------------------------------------------------------------------
-let cleanup = [];
+let cleanup = [];  // undo functions for the current page (listeners, timers)
 async function route() {
   cleanup.forEach((f) => f()); cleanup = [];
   const st = await api("GET", "/api/state");
@@ -206,7 +206,12 @@ const TABS = [["overview", "Overview"], ["console", "Console"], ["players", "Pla
   ["lists", "Lists"], ["backups", "Backups"], ["stats", "Stats"], ["settings", "Settings"]];
 
 async function viewServer(id, tab) {
-  const s = await api("GET", `/api/servers/${id}`);
+  let s;
+  try { s = await api("GET", `/api/servers/${id}`); } catch (e) {
+    toast("That server no longer exists.");
+    location.hash = "#/";
+    return;
+  }
   const header = h("div", { class: "row", style: "flex-wrap:wrap;justify-content:center;gap:10px;margin-top:6px" });
   const body = h("div");
   function renderHeader(st) {
@@ -219,13 +224,30 @@ async function viewServer(id, tab) {
       h("button", { class: "blue", disabled: !running, onclick: () => guard(() => api("POST", `/api/servers/${id}/restart`)) }, "Restart"));
   }
   renderHeader(s);
-  cleanup.push(listen((e) => { if (e.server === id && e.type === "status") { Object.assign(s, e); renderHeader(s); } }));
+  // When the server changes state (stopped, running...), the tab is drawn again from fresh data so what can be
+  // done now (e.g. editing the welcome message once stopped) is available straight away.
+  const views = { overview: tabOverview, console: tabConsole, players: tabPlayers, chat: tabChat, world: tabWorld,
+    lists: tabLists, backups: tabBackups, stats: tabStats, settings: tabSettings };
+  let tabCleanup = [];
+  async function renderTab(fresh) {
+    tabCleanup.forEach((f) => f());
+    const outer = cleanup;
+    cleanup = [];
+    try { await (views[tab] || tabOverview)(id, fresh, body); } finally { tabCleanup = cleanup; cleanup = outer; }
+  }
+  cleanup.push(() => tabCleanup.forEach((f) => f()));
+  cleanup.push(listen((e) => {
+    if (e.server !== id || e.type !== "status") return;
+    const changed = e.status !== s.status;
+    Object.assign(s, e);
+    renderHeader(s);
+    if (changed && tab !== "console" && ["running", "stopped", "crashed"].includes(e.status))
+      api("GET", `/api/servers/${id}`).then((fresh) => { Object.assign(s, fresh); return renderTab(s); }).catch(() => {});
+  }));
   const tabs = h("div", { class: "tabs" }, TABS.map(([k, label]) =>
     h("button", { class: k === tab ? "green" : "blue", onclick: () => (location.hash = `#/server/${id}/${k}`) }, label)));
   mount(h("div", { class: "page" }, header, tabs, body));
-  const views = { overview: tabOverview, console: tabConsole, players: tabPlayers, chat: tabChat, world: tabWorld,
-    lists: tabLists, backups: tabBackups, stats: tabStats, settings: tabSettings };
-  await (views[tab] || tabOverview)(id, s, body);
+  await renderTab(s);
 }
 
 const running = (s) => s.status === "running";
@@ -347,11 +369,13 @@ async function tabWorld(id, s, body) {
     await api("PATCH", `/api/servers/${id}/world`, { password: pw });
     toast(pw ? "Password set." : "Password removed."); route();
   });
-  body.replaceChildren(h("div", { class: "grid" },
+  const notice = isRunning ? h("div", { class: "alert wide", style: "margin:0 auto 14px;animation:none" }, h("h2", { class: "label" }, "Server " + s.status),
+    h("p", {}, "The name and welcome message can only be changed while the server is stopped. Password and PvP can be changed now."),
+    h("div", { class: "buttons", style: "margin-bottom:10px" }, h("button", { class: "red", disabled: s.status !== "running", onclick: () => guard(() => api("POST", `/api/servers/${id}/stop`)) }, "Stop server"))) : null;
+  body.replaceChildren(notice, h("div", { class: "grid" },
     h("div", { class: "panel" }, h("h2", { class: "label" }, "World settings"),
       h("label", { class: "field" }, h("span", {}, "Name"), name),
       h("label", { class: "field" }, h("span", {}, "Welcome message"), welcome),
-      isRunning ? h("p", { class: "hint" }, "Stop the server to change the name or the welcome message.") : null,
       h("div", { class: "row", style: "justify-content:space-between;margin:12px 0" }, h("span", {}, "PvP"), pvp),
       h("div", { class: "row", style: "justify-content:space-between;margin:12px 0" }, h("span", {}, "Password: " + (w.passwordSet ? "set" : "none")),
         h("button", { class: "blue", onclick: setPassword }, "Change...")),
@@ -370,20 +394,29 @@ async function tabWorld(id, s, body) {
           if (!(await confirmBox("Custom rules", "Convert this world to a custom rules world the next time it starts? A backup is taken first. This cannot be undone except by restoring that backup.", "Convert"))) return;
           const r = await api("POST", `/api/servers/${id}/convert-custom-rules`); toast(r.note);
         }) }, h("span", { class: "name" }, "Convert to custom rules"), h("span", { class: "value" }, w.customRules ? "Custom" : "Vanilla")),
-        h("button", { class: "cell", onclick: () => guard(async () => {
-          if (!(await confirmBox("Delete world", `Delete ${s.name}? It is backed up, then kept in the trash for 7 days.`, "Delete", "red"))) return;
-          await api("DELETE", `/api/servers/${id}`); toast(`${s.name} moved to the trash.`); location.hash = "#/";
-        }) }, h("span", { class: "name", style: "color:#ffb0b0" }, "Delete"), h("span", { class: "arrow" }))),
+        h("button", { class: "cell", onclick: () => deleteServer(id, s) }, h("span", { class: "name", style: "color:#ffb0b0" }, "Delete server"), h("span", { class: "arrow" }))),
       w.customRules ? h("div", { style: "margin-top:12px" }, h("h3", { class: "label", style: "font-size:15px" }, "Custom rules"),
         h("div", { class: "kv small" }, Object.entries(w.customRules).filter(([k]) => k !== "spawnItemSlots").flatMap(([k, v]) => [k, String(v)]))) : null)));
 }
 
+// A server and its world are one: deleting removes both (backed up, then kept in the trash for 7 days).
+async function deleteServer(id, s) {
+  if (!(await confirmBox("Delete server", `Delete the server ${s.name} and its world? It is backed up first, then kept in the trash (Settings) for 7 days, where you can restore it.`, "Delete", "red"))) return;
+  await guard(async () => {
+    await api("DELETE", `/api/servers/${id}`);
+    toast(`${s.name} moved to the trash.`);
+    sessionStorage.removeItem("bh-portal-id");
+    location.hash = "#/";
+  });
+}
+
 const LIST_INFO = { adminlist: ["Admins", "Can use every server command and remove any object."], modlist: ["Mods", "Can use most server commands."],
-  blacklist: ["Banned", "Names or IP addresses that cannot connect."], whitelist: ["Whitelist", "If anyone is listed, only they can connect."] };
+  blacklist: ["Banned", "Names or IP addresses that cannot connect."], whitelist: ["Whitelist", ""] };
 async function tabLists(id, s, body) {
   const isRunning = running(s);
   const panels = Object.entries(LIST_INFO).map(([key, [title, hint]]) => {
     const area = h("textarea", { class: "mono", spellcheck: "false" }, (s.lists?.[key] || []).join("\n"));
+    if (key === "whitelist") return whitelistPanel(id, s, title, area);
     return h("div", { class: "panel list-editor" }, h("h2", { class: "label" }, title), h("p", { class: "hint" }, hint + " One per line."), area,
       h("div", { class: "buttons", style: "margin-top:10px" }, h("button", { class: "green", onclick: () => guard(async () => {
         const r = await api("PUT", `/api/servers/${id}/lists/${key}`, { entries: area.value.split("\n") });
@@ -396,6 +429,40 @@ async function tabLists(id, s, body) {
     h("div", { class: "buttons", style: "margin-top:14px" }, h("button", { class: "blue", disabled: !isRunning, onclick: () => guard(async () => {
       await api("POST", `/api/servers/${id}/lists/reload`); toast("Lists reloaded from disk.");
     }) }, "Reload lists from disk")));
+}
+
+// The whitelist is on when it lists anyone (the server lets everyone in while it is empty). Turning it off keeps
+// the names aside in the portal so turning it on again restores them.
+function whitelistPanel(id, s, title, area) {
+  let on = (s.lists?.whitelist || []).length > 0;
+  let stash = s.whitelistStash || [];
+  const toggle = h("button", { class: "toggle" });
+  const status = h("p", { class: "hint" });
+  const save = h("button", { class: "green" }, "Save");
+  function show() {
+    toggle.classList.toggle("on", on);
+    status.textContent = on ? "On: only the players listed here (and mods) can join."
+      : stash.length ? "Off: anyone can join. The names below are kept for when you turn it back on."
+      : "Off: anyone can join. Add names, then save, to turn it on.";
+    if (!on && stash.length) area.value = stash.join("\n");
+    area.disabled = !on && stash.length > 0;
+    save.disabled = area.disabled;
+  }
+  toggle.onclick = () => guard(async () => {
+    if (!on && !stash.length && !area.value.trim()) throw new ApiError("Add at least one name or IP address first, then save.");
+    const r = await api("POST", `/api/servers/${id}/whitelist`, { enabled: !on });
+    on = r.entries.length > 0; stash = r.stash;
+    if (on) area.value = r.entries.join("\n");
+    show(); toast(on ? "Whitelist on." : "Whitelist off: anyone can join.");
+  });
+  save.onclick = () => guard(async () => {
+    const r = await api("PUT", `/api/servers/${id}/lists/whitelist`, { entries: area.value.split("\n") });
+    area.value = r.entries.join("\n"); on = r.entries.length > 0; show(); toast(`${title} saved.`);
+  });
+  show();
+  return h("div", { class: "panel list-editor" }, h("h2", { class: "label" }, title),
+    h("div", { class: "row", style: "justify-content:space-between;margin-bottom:6px" }, h("span", {}, "Whitelist"), toggle),
+    status, area, h("div", { class: "buttons", style: "margin-top:10px" }, save));
 }
 
 async function tabBackups(id, s, body) {
@@ -499,7 +566,10 @@ async function tabSettings(id, s, body) {
         mods: mods.filter((m) => on(modToggles[m.name])).map((m) => m.name),
       });
       toast(running(s) ? "Saved. Restart the server to apply port, players and mods." : "Saved.");
-    }) }, "Save")));
+    }) }, "Save")),
+    h("div", { class: "panel", style: "margin-top:14px" }, h("h2", { class: "label" }, "Delete"),
+      h("p", { class: "hint" }, "Deleting the server deletes its world too (each server runs one world). It is backed up first and kept in the trash for 7 days."),
+      h("div", { class: "buttons" }, h("button", { class: "red wide", onclick: () => deleteServer(id, s) }, "Delete server"))));
 }
 
 // ---- Create World ---------------------------------------------------------------------------------------------------
@@ -653,7 +723,10 @@ async function viewSettings() {
     toast("Password changed. Other devices are signed out.");
   });
   const notif = "Notification" in window ? Notification.permission : "unsupported";
-  mount(h("div", { class: "page" }, h("h1", { class: "label", style: "text-align:center" }, "Settings"), h("div", { class: "grid" },
+  mount(h("div", { class: "page" },
+    h("div", { class: "row", style: "margin-top:6px" }, h("button", { class: "blue", onclick: () => (location.hash = "#/") }, "Back"),
+      h("h1", { class: "label", style: "flex:1;text-align:center;margin:0" }, "Settings"), h("span", { style: "width:88px" })),
+    h("div", { class: "grid", style: "margin-top:14px" },
     h("div", { class: "panel" }, h("h2", { class: "label" }, "Portal"), h("div", { class: "table" },
       st.passwordFromEnvironment ? h("div", { class: "cell" }, h("span", { class: "name" }, "Password"), h("span", { class: "value" }, "Set by PORTAL_PASSWORD"))
         : h("button", { class: "cell", onclick: changePassword }, h("span", { class: "name" }, "Change password"), h("span", { class: "arrow" })),

@@ -31,6 +31,9 @@ PLAYERS_REPLY = re.compile(r"^(?:SERVER: )?There are (\d+) players? connected")
 PLAYER_ROW = re.compile(r"^(.+?) \| (.+?) \| (\S+)\s*$")
 CHAT = re.compile(r"^(.{1,40}?): (.*)$")
 LOADED = "World load complete."
+# Logged by -[World dealloc] during -[GameController stop], after saveAll / finishBulkDatabaseUpdate: the world is
+# on disk. With --no-exit the process then stays alive, idle, so the portal ends it.
+SAVED_AND_CLOSED = "Exiting World."
 PORT_IN_USE = re.compile(r"Failed to start server\. Perhaps port (\d+) is already in use\?")
 
 DEFAULTS = {
@@ -79,6 +82,7 @@ class Server:
         self._pending_count = 0
         self._last_command_at = 0.0
         self._loaded = asyncio.Event()
+        self._closed = asyncio.Event()
         self.log_dir = config.LOGS / world_id
         self.log_dir.mkdir(parents=True, exist_ok=True)
         log = self.log_dir / "server.log"
@@ -141,6 +145,7 @@ class Server:
         self.last_error = None
         self._stopping = False
         self._loaded.clear()
+        self._closed.clear()
         self._set_status("starting")
         self._log_line(f"[portal] Starting: {' '.join(self._arguments(cfg))}")
         self.proc = await asyncio.create_subprocess_exec(
@@ -167,12 +172,31 @@ class Server:
             await proc.stdin.drain()
         except (BrokenPipeError, ConnectionResetError):
             pass
+        exited = asyncio.ensure_future(proc.wait())
+        closed = asyncio.ensure_future(self._closed.wait())
+        done, _ = await asyncio.wait({exited, closed}, timeout=timeout, return_when=asyncio.FIRST_COMPLETED)
+        if exited not in done:
+            if closed in done:
+                try:
+                    await asyncio.wait_for(asyncio.shield(exited), 2)
+                except asyncio.TimeoutError:
+                    self._log_line("[portal] The world is saved; ending the server process.")
+                    proc.kill()
+            else:
+                self._log_line(f"[portal] The server did not stop within {timeout} s; killing it.")
+                proc.kill()
+            await exited
+        closed.cancel()
+
+    async def _end_after_in_game_stop(self) -> None:
+        proc = self.proc
+        self._stopping = True
+        self._set_status("stopping")
+        self._log_line("[portal] The world was stopped from inside the game.")
         try:
-            await asyncio.wait_for(proc.wait(), timeout)
+            await asyncio.wait_for(proc.wait(), 2)
         except asyncio.TimeoutError:
-            self._log_line(f"[portal] The server did not stop within {timeout} s; killing it.")
             proc.kill()
-            await proc.wait()
 
     async def command(self, line: str) -> None:
         proc = self.proc
@@ -218,6 +242,11 @@ class Server:
             return
         if self._pending_players is not None:
             self._finish_players_reply()
+        if msg == SAVED_AND_CLOSED:
+            self._closed.set()
+            if not self._stopping:  # stopped from inside the game (an admin's /stop): end the idle process too
+                asyncio.get_running_loop().create_task(self._end_after_in_game_stop())
+            return
         if msg == LOADED:
             self._loaded.set()
             cfg = db.server_config(self.id) or {}
@@ -298,7 +327,7 @@ class Server:
     async def _exited(self, code: int) -> None:
         self.players.clear()
         self._players_changed()
-        self._log_line(f"[portal] The server exited with code {code}.")
+        self._log_line("[portal] The server stopped." if self._stopping else f"[portal] The server exited with code {code}.")
         if self._stopping or code == 0:
             self.started_at = None
             self._set_status("stopped")
@@ -355,8 +384,10 @@ class Manager:
         return self.servers[world_id]
 
     def known_ids(self) -> list[str]:
-        ids = set(worlds.all_ids()) | set(db.all_server_configs())
-        return sorted(ids)
+        # A server is its world: the existing worlds plus the ones being created. (A deleted world keeps its
+        # settings while it is in the trash, so restoring it brings them back, but it is not listed.)
+        creating = {i for i, cfg in db.all_server_configs().items() if cfg.get("create")}
+        return sorted(set(worlds.all_ids()) | creating)
 
     def next_free_port(self) -> int:
         used = {server_config(i)["port"] for i in db.all_server_configs()}
