@@ -135,8 +135,16 @@ class Server:
         if self.proc and self.proc.returncode is None:
             return
         cfg = server_config(self.id)
-        if not cfg.get("create") and not worlds.exists(self.id):
+        if cfg.get("create") and worlds.complete(self.id):
+            # Created, but the portal missed the end of it: load the world rather than create it again.
+            cfg.pop("create", None)
+            db.save_server_config(self.id, cfg)
+        elif cfg.get("create"):
+            worlds.remove_unfinished(self.id)  # an earlier creation was interrupted: generate the world afresh
+        elif not worlds.exists(self.id):
             raise RuntimeError("The world's save folder is missing.")
+        elif not worlds.complete(self.id):
+            raise RuntimeError("This world was never fully created. Delete it and create it again.")
         port = cfg["port"]
         if any(s is not self and s.pid and server_config(s.id)["port"] == port for s in manager.servers.values()) \
                 or not udp_port_free(port):

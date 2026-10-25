@@ -171,15 +171,26 @@ def _require_stopped(world_id: str) -> None:
 def _overview(world_id: str) -> dict:
     s = manager.get(world_id)
     cfg = server_config(world_id)
+    done = worlds.complete(world_id)
+    create = cfg.get("create")
     try:
-        summary = worlds.summary(world_id) if worlds.exists(world_id) else \
-            {"id": world_id, "name": cfg["create"]["name"].upper(), "size": cfg["create"]["size"],
-             "expert": cfg["create"].get("expert", False), "custom": cfg["create"].get("customRules") is not None,
-             "created": None}
+        if done:
+            summary = worlds.summary(world_id)
+        elif create:
+            summary = {"id": world_id, "name": create["name"].upper(), "size": create["size"],
+                       "expert": create.get("expert", False), "custom": create.get("customRules") is not None,
+                       "created": None}
+        else:
+            summary = {**worlds.summary(world_id), "created": None}
     except Exception:
         summary = {"id": world_id, "name": world_id}
-    return {**summary, **s.snapshot(), "config": {k: v for k, v in cfg.items() if k != "create"},
-            "creating": bool(cfg.get("create"))}
+    snap = s.snapshot()
+    return {**summary, **snap, "config": {k: v for k, v in cfg.items() if k != "create"},
+            "creating": not done,
+            # A creation that is not running (stopped, crashed or cut short by a restart): Start generates the
+            # world again (when the portal still has its settings), Delete removes what was left.
+            "unfinished": not done and snap["status"] not in ("starting", "running", "stopping"),
+            "canRecreate": bool(create)}
 
 
 @app.get("/api/servers")
@@ -232,7 +243,7 @@ async def create_server(body: CreateIn, _=User):
 def get_server(world_id: str, _=User):
     _require_world(world_id)
     out = _overview(world_id)
-    if worlds.exists(world_id):
+    if worlds.complete(world_id):
         out["world"] = worlds.info(world_id)
         out["lists"] = {n: worlds.read_list(world_id, n) for n in worlds.LISTS}
         out["whitelistStash"] = (db.server_config(world_id) or {}).get("whitelistStash", [])
@@ -553,10 +564,11 @@ async def delete_server(world_id: str, _=User):
     _require_world(world_id)
     s = manager.get(world_id)
     await s.stop()
-    if worlds.exists(world_id):
+    if worlds.complete(world_id):
         await asyncio.to_thread(backups.safe_create, world_id, "before-delete")
         worlds.to_trash(world_id)
-    else:
+    else:  # never fully created: nothing to back up or restore
+        await asyncio.to_thread(worlds.remove_unfinished, world_id)
         db.delete_server_config(world_id)
     manager.servers.pop(world_id, None)
     return {"ok": True}

@@ -60,6 +60,25 @@ def exists(world_id: str) -> bool:
         return False
 
 
+def complete(world_id: str) -> bool:
+    """Whether the world was fully created. The server makes the save folder and an empty world_db as soon as it
+    starts generating (a 16x world takes a while) and writes main/worldv2 only once generation finishes, so a
+    creation that was stopped or interrupted leaves a folder without it."""
+    if not exists(world_id):
+        return False
+    try:
+        read_record(world_id)
+        return True
+    except Exception:
+        return False
+
+
+def remove_unfinished(world_id: str) -> None:
+    """Delete the save folder of a world whose creation never finished (there is nothing in it to keep)."""
+    if not complete(world_id):
+        shutil.rmtree(path(world_id), ignore_errors=True)
+
+
 def all_ids() -> list[str]:
     return sorted(p.name for p in config.WORLDS.iterdir() if (p / "world_db").is_dir()) if config.WORLDS.is_dir() \
         else []

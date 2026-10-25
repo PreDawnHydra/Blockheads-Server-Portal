@@ -155,7 +155,10 @@ async function viewHome() {
       const players = (s.players || []).length;
       info.replaceChildren(h("h1", { class: "label" }, s.name),
         h("div", { class: "sub" }, h("span", { class: "status-dot " + s.status }), `${s.status} · ${s.status === "running" ? `${players}/${s.config.maxPlayers} players · ` : ""}port ${s.config.port}`),
-        s.lastError ? h("div", { class: "sub", style: "color:#ffb0b0;text-transform:none" }, s.lastError) : null);
+        s.lastError ? h("div", { class: "sub", style: "color:#ffb0b0;text-transform:none" }, s.lastError) : null,
+        s.unfinished ? h("div", { class: "sub", style: "text-transform:none" }, s.canRecreate
+          ? "Creating this world did not finish. Start creates it again; or delete it in Options... → Settings."
+          : "Creating this world did not finish. Delete it in Options... → Settings.") : null);
       const running = s.status === "running" || s.status === "starting";
       actions.replaceChildren(
         h("button", { class: "blue wide", onclick: () => (location.hash = `#/server/${s.id}`) }, "Options..."),
